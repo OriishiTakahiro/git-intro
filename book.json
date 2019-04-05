@@ -2,12 +2,17 @@
   "plugins": [
     "expand-active-chapter",
     "navigator",
-    "uml"
+    "uml",
+    "japanese-support",
+    "search-languages",
+    "git-author",
+    "copy-code-button"
   ],
   "pluginsConfig": {
     "uml": {
       "charset": "utf-8",
       "format": "svg"
     }
-  }
+  },
+  "language": "ja"
 }
