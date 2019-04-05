@@ -1,0 +1,27 @@
+version: 2
+jobs:
+  build:
+
+    docker:
+      - image: circleci/node:10.15
+
+    environment:
+      TZ: /usr/share/zoneinfo/Asia/Tokyo
+
+    steps:
+      - checkout
+
+      - run:
+          name: install gitbook
+          command: npm install gitbook-cli -g
+
+      - run:
+          name: build docs
+          command: gitbook install && gitbook build
+      - run:
+          name: push to gh-pages branch
+          command: |
+            git checkout -b gh-pages origin/gh-pages
+            git add _books
+            git commit -m "Auto publish by CircleCI"
+            git push origin gh-pages
