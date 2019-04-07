@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "gh-pages": "^2.0.1",
+    "gitbook": "^2.6.9"
+  }
+}
