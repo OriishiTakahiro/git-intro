@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "gh-pages": "^2.0.1",
-    "gitbook": "^2.6.9"
+    "gitbook": "^2.6.9",
+    "gitbook-cli": "^2.3.2"
   }
 }
