@@ -13,6 +13,12 @@ jobs:
       - checkout
 
       - run:
+          name: configure git
+          command: |
+            git config --global user.email "takahiro0914@live.jp"
+            git config --global user.name "OriishiTakahiro"
+
+      - run:
           name: install gitbook
           command: yarn install
 
