@@ -2,6 +2,7 @@
   "plugins": [
     "expand-active-chapter",
     "navigator",
+    "include-codeblock",
     "uml",
     "japanese-support",
     "search-languages",

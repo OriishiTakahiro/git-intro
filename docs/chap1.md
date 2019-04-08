@@ -36,24 +36,7 @@ Gitとは一言にバージョン管理ツールと呼ばれるもので，
 
 初期のGalcは足し算しかなく，`go run galc.go add 1 2`とすると1と2の足し算が返ってきます．
 
-```go
-package main
-
-import (
-	"fmt"
-	"os"
-	sc "strconv"
-)
-
-func main() {
-	lhs, _ := sc.Atoi(os.Args[2])
-	rhs, _ := sc.Atoi(os.Args[3])
-	switch os.Args[1] {
-	case "add":
-		fmt.Println(lhs + rhs)
-	}
-}
-```
+[import](../src/chap1/1st.go)
 
 ## Gitがないとき
 
@@ -63,84 +46,19 @@ func main() {
 
 次に引き算機能を入れてみましょう．
 
-```go
-package main
-
-import (
-	"fmt"
-	"os"
-	sc "strconv"
-)
-
-func main() {
-	lhs, _ := sc.Atoi(os.Args[2])
-	rhs, _ := sc.Atoi(os.Args[3])
-	switch os.Args[1] {
-	case "add":
-		fmt.Println(lhs + rhs)
-	case "sub":
-		fmt.Println(lhs - rhs)
-	}
-}
-```
+[import](../src/chap1/2nd.go)
 
 これが`galc_0.0.2.zip`となるわけですね．
 
 次に割り算を入れてみましょう．
 
-```go
-package main
-
-import (
-	"fmt"
-	"os"
-	sc "strconv"
-)
-
-func main() {
-	lhs, _ := sc.Atoi(os.Args[2])
-	rhs, _ := sc.Atoi(os.Args[3])
-	switch os.Args[1] {
-	case "add":
-		fmt.Println(lhs + rhs)
-	case "sub":
-		fmt.Println(lhs - rhs)
-	case "div":
-		fmt.Println(lhs / rhs)
-	}
-}
-```
+[import](../src/chap1/3rd.go)
 
 `galc_0.0.3.zip`の完成です．
 
 つぎに`os.Args[2]`と`os.Args[3]`が整数でないときにエラーが出て落ちるので，変換チェックを入れないとですね．
 
-```go
-package main
-
-import (
-	"fmt"
-	"os"
-	sc "strconv"
-)
-
-func main() {
-	lhs, lerr := sc.Atoi(os.Args[2])
-	rhs, rerr := sc.Atoi(os.Args[3])
-	if lerr != nil || rerr != nil {
-		fmt.Println("2, 3番目の引数の何れかが整数に変換できません")
-		os.Exit(1)
-	}
-	switch os.Args[1] {
-	case "add":
-		fmt.Println(lhs + rhs)
-	case "sub":
-		fmt.Println(lhs - rhs)
-	case "div":
-		fmt.Println(lhs / rhs)
-	}
-}
-```
+[import](../src/chap1/4th.go)
 
 これで`galc_0.0.3.zip`ができました．
 
