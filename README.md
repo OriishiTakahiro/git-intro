@@ -1,3 +1,9 @@
+# Gitハンズオン入門資料
+
+[本資料](https://github.com/OriishiTakahiro/git-intro)
+
+[![CircleCI](https://circleci.com/gh/OriishiTakahiro/cockroach_game/tree/master.svg?style=svg)](https://circleci.com/gh/OriishiTakahiro/cockroach_game/tree/master)
+
 # 対象者
 
 本記事の対象者は，

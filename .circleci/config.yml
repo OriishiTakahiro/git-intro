@@ -1,34 +1,58 @@
 version: 2
+
 jobs:
 
   build:
-
     docker:
       - image: circleci/node:10.15
-
     environment:
       TZ: /usr/share/zoneinfo/Asia/Tokyo
-
     steps:
       - checkout
-
-      - run:
-          name: configure git
-          command: |
-            git config --global user.email "takahiro0914@live.jp"
-            git config --global user.name "OriishiTakahiro"
-
       - run:
           name: install gitbook
           command: yarn install
-
       - run:
           name: build docs
           command: |
             yarn run gitbook install
             yarn run gitbook init
             yarn run gitbook build
+      - run:
+          name: mv artifacts to persistent workspace
+          command: |
+            mkdir -p /tmp/artifacts
+            mv _book /tmp/artifacts
+      - persist_to_workspace:
+          root: /tmp/artifacts
+          paths:
+            - _book
 
+  deploy:
+    docker:
+      - image: circleci/node:10.15
+    steps:
+      - checkout
+      - attach_workspace:
+          at: /tmp/artifacts
+      - run:
+          name: configure git
+          command: |
+            git config --global user.email "takahiro0914@live.jp"
+            git config --global user.name "OriishiTakahiro"
       - run:
           name: push to gh-pages branch
-          command: yarn run gh-pages -d _book
+          command: yarn run gh-pages -d /tmp/artifacts/_book
+
+workflows:
+  version: 2
+  build_deploy:
+    jobs:
+      - build
+      - deploy:
+          type: approval
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
