@@ -283,7 +283,7 @@ git branch dev-sub
 
 ```sh
   dev-sub
-* mast
+* master
 ```
 
 `dev-sub`ブランチは先程作ったブランチで，`master`ブランチはデフォルトで用意されているブランチとなっています．
