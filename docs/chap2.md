@@ -37,7 +37,7 @@ Gitは以下の3つのスペースを扱い，それぞれの役割を理解し�
 
 Play with Dockerでは初期からgitが入っているので直ぐに始められます．
 
-またエディタはvimが入っていますが，emacsやnanoが使いたい人は`apt-get install emacs`などで導入してください．
+またエディタはvimが入っていますが，emacsやnanoが使いたい人は`apk update && apk add emacs`などで導入してください．
 
 __Play with DockerではEscキーが使えません！vimを使う人はEscの代わりにCtrl+cを使ってください！__
 
