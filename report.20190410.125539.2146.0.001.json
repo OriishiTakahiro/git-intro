@@ -1,0 +1,322 @@
+
+{
+  "header": {
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20190410.125539.2146.0.001.json",
+    "dumpEventTime": "2019-04-10T12:55:39Z",
+    "dumpEventTimeStamp": "1554868539043",
+    "processId": 2146,
+    "commandLine": [
+      "node",
+      "/home/takahiro/.yarn/bin/gitbook",
+      "serve"
+    ],
+    "nodejsVersion": "v11.13.0",
+    "glibcVersionRuntime": "2.28",
+    "glibcVersionCompiler": "2.28",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "linux",
+    "componentVersions": {
+      "node": "11.13.0",
+      "v8": "7.0.276.38-node.18",
+      "uv": "1.27.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "67",
+      "nghttp2": "1.36.0",
+      "napi": "4",
+      "llhttp": "1.1.1",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1b",
+      "cldr": "35.0",
+      "icu": "64.1",
+      "tz": "2018i",
+      "unicode": "12.0"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v11.13.0/node-v11.13.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v11.13.0/node-v11.13.0.tar.gz"
+    },
+    "osName": "Linux",
+    "osRelease": "5.0.7-arch1-1-ARCH",
+    "osVersion": "#1 SMP PREEMPT Mon Apr 8 10:37:08 UTC 2019",
+    "osMachine": "x86_64",
+    "host": "takahirothinkpad"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x000055723961eb51",
+      "symbol": "report::TriggerNodeReport(v8::Isolate*, node::Environment*, char const*, char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, v8::Local<v8::String>) [node]"
+    },
+    {
+      "pc": "0x000055723950f48c",
+      "symbol": "node::OnFatalError(char const*, char const*) [node]"
+    },
+    {
+      "pc": "0x00005572396aa162",
+      "symbol": "v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [node]"
+    },
+    {
+      "pc": "0x00005572396aa3bb",
+      "symbol": "v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [node]"
+    },
+    {
+      "pc": "0x0000557239a42183",
+      "symbol": " [node]"
+    },
+    {
+      "pc": "0x0000557239a422c4",
+      "symbol": " [node]"
+    },
+    {
+      "pc": "0x0000557239a51e76",
+      "symbol": "v8::internal::Heap::PerformGarbageCollection(v8::internal::GarbageCollector, v8::GCCallbackFlags) [node]"
+    },
+    {
+      "pc": "0x0000557239a5281e",
+      "symbol": "v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [node]"
+    },
+    {
+      "pc": "0x0000557239a54a1d",
+      "symbol": "v8::internal::Heap::AllocateRawWithLightRetry(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment) [node]"
+    },
+    {
+      "pc": "0x0000557239a54a72",
+      "symbol": "v8::internal::Heap::AllocateRawWithRetryOrFail(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment) [node]"
+    },
+    {
+      "pc": "0x0000557239a233b5",
+      "symbol": "v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationSpace) [node]"
+    },
+    {
+      "pc": "0x0000557239c91c5f",
+      "symbol": "v8::internal::Runtime_AllocateInNewSpace(int, v8::internal::Object**, v8::internal::Isolate*) [node]"
+    },
+    {
+      "pc": "0x00000638518cfc5d",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 1482035200,
+    "totalCommittedMemory": 1480172568,
+    "usedMemory": 1348895336,
+    "availableMemory": 46210696,
+    "memoryLimit": 1526909922,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 524288,
+        "committedMemory": 42224,
+        "capacity": 515584,
+        "used": 33520,
+        "available": 482064
+      },
+      "new_space": {
+        "memorySize": 2097152,
+        "committedMemory": 1081352,
+        "capacity": 1031168,
+        "used": 15400,
+        "available": 1015768
+      },
+      "old_space": {
+        "memorySize": 1459818496,
+        "committedMemory": 1459492416,
+        "capacity": 1333633624,
+        "used": 1333603512,
+        "available": 30112
+      },
+      "code_space": {
+        "memorySize": 3670016,
+        "committedMemory": 3631904,
+        "capacity": 2851168,
+        "used": 2851168,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 4206592,
+        "committedMemory": 4206016,
+        "capacity": 2114960,
+        "used": 2114960,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 11718656,
+        "committedMemory": 11718656,
+        "capacity": 54959528,
+        "used": 10276776,
+        "available": 44682752
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 0,
+        "used": 0,
+        "available": 0
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 1402.26,
+    "kernelCpuSeconds": 144.784,
+    "cpuConsumptionPercent": 14.8869,
+    "maxRss": 1666064384,
+    "pageFaults": {
+      "IORequired": 13,
+      "IONotRequired": 13861372
+    },
+    "fsActivity": {
+      "reads": 3376,
+      "writes": 269608
+    }
+  },
+  "uvthreadResourceUsage": {
+    "userCpuSeconds": 575.397,
+    "kernelCpuSeconds": 47.7255,
+    "cpuConsumptionPercent": 5.99617,
+    "fsActivity": {
+      "reads": 3376,
+      "writes": 6104
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "DBUS_SESSION_BUS_ADDRESS": "unix:path=/run/user/1000/bus",
+    "DISPLAY": ":0",
+    "DefaultImModule": "fcitx",
+    "EDITOR": "nvim",
+    "GIT_RADAR_FETCH_TIME": "30",
+    "GOPATH": "/home/takahiro/go",
+    "GTK_IM_MODULE": "fcitx",
+    "HOME": "/home/takahiro",
+    "INVOCATION_ID": "529f2457994140b6a0422c9dace91301",
+    "JOURNAL_STREAM": "9:29007",
+    "KONSOLE_DBUS_SERVICE": ":1.119",
+    "KONSOLE_DBUS_SESSION": "/Sessions/1",
+    "KONSOLE_DBUS_WINDOW": "/Windows/1",
+    "KONSOLE_PROFILE_NAME": "Profile 1",
+    "KONSOLE_VERSION": "181203",
+    "LANG": "ja_JP.UTF-8",
+    "LANGUAGE": "",
+    "LATEX_MK_DIR": "/usr/share/latex-mk",
+    "LOGNAME": "takahiro",
+    "MAIL": "/var/spool/mail/takahiro",
+    "MAVEN_OPTS": "-Xmx512m",
+    "MOZ_PLUGIN_PATH": "/usr/lib/mozilla/plugins",
+    "OLDPWD": "/home/takahiro/Documents/git-intro",
+    "PATH": "/home/takahiro/google-cloud-sdk/bin:/home/takahiro/.pyenv/shims:/home/takahiro/.rbenv/shims:/home/takahiro/google-cloud-sdk/bin:/home/takahiro/.pyenv/shims:/home/takahiro/.rbenv/shims:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/takahiro/.rbenv/shims:/home/takahiro/.gem/ruby/2.6.0/bin:/home/takahiro/go/bin:/home/takahiro/.cargo/bin:/home/takahiro/.zsh/git-radar:/home/takahiro/.yarn/bin:/home/takahiro/.rbenv/shims:/home/takahiro/.gem/ruby/2.6.0/bin:/home/takahiro/go/bin:/home/takahiro/.cargo/bin:/home/takahiro/.zsh/git-radar:/home/takahiro/.yarn/bin",
+    "PROFILEHOME": "",
+    "PWD": "/home/takahiro/Documents/git-intro",
+    "PYENV_ROOT": "/home/takahiro/.pyenv",
+    "PYENV_SHELL": "zsh",
+    "QT_IM_MODULE": "fcitx",
+    "QT_QPA_PLATFORMTHEME": "qt5ct",
+    "QT_SCALE_FACTOR": "1.0",
+    "RBENV_SHELL": "zsh",
+    "SHELL": "/bin/zsh",
+    "SHELL_SESSION_ID": "13b1158f837c449da7868ed103d4ca3a",
+    "SHLVL": "4",
+    "TERM": "xterm-256color",
+    "USER": "takahiro",
+    "WINDOWID": "23068679",
+    "WINDOWPATH": "1",
+    "XAUTHORITY": "/home/takahiro/.Xauthority",
+    "XDG_CACHE_HOME": "/home/takahiro/.cache",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "XDG_SEAT": "seat0",
+    "XDG_SESSION_CLASS": "user",
+    "XDG_SESSION_ID": "1",
+    "XDG_SESSION_TYPE": "tty",
+    "XDG_VTNR": "1",
+    "XMODIFIERS": "@im=fcitx",
+    "ZLE_RPROMPT_INDENT": "1",
+    "_": "/home/takahiro/.yarn/bin/gitbook",
+    "VIMRUNTIME": "/usr/share/nvim/runtime",
+    "NVIM_LISTEN_ADDRESS": "/tmp/nvimFTttWV/0",
+    "VIM": "/usr/share/nvim",
+    "MYVIMRC": "/home/takahiro/.config/nvim/init.vim",
+    "NVIM_TUI_ENABLE_TRUE_COLOR": "1",
+    "TMPDIR": "/tmp"
+  },
+  "userLimits": {
+    "core_file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "data_seg_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_locked_memory_bytes": {
+      "soft": 65536,
+      "hard": 65536
+    },
+    "max_memory_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "open_files": {
+      "soft": 524288,
+      "hard": 524288
+    },
+    "stack_size_bytes": {
+      "soft": 8388608,
+      "hard": "unlimited"
+    },
+    "cpu_time_seconds": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_user_processes": {
+      "soft": 63142,
+      "hard": 63142
+    },
+    "virtual_memory_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    }
+  },
+  "sharedObjects": [
+    "linux-vdso.so.1",
+    "/usr/lib/libz.so.1",
+    "/usr/lib/libuv.so.1",
+    "/usr/lib/libcares.so.2",
+    "/usr/lib/libnghttp2.so.14",
+    "/usr/lib/libcrypto.so.1.1",
+    "/usr/lib/libssl.so.1.1",
+    "/usr/lib/libicui18n.so.64",
+    "/usr/lib/libicuuc.so.64",
+    "/usr/lib/libdl.so.2",
+    "/usr/lib/librt.so.1",
+    "/usr/lib/libstdc++.so.6",
+    "/usr/lib/libm.so.6",
+    "/usr/lib/libgcc_s.so.1",
+    "/usr/lib/libpthread.so.0",
+    "/usr/lib/libc.so.6",
+    "/usr/lib/libnsl.so.2",
+    "/usr/lib/libicudata.so.64",
+    "/lib64/ld-linux-x86-64.so.2",
+    "/usr/lib/libtirpc.so.3",
+    "/usr/lib/libgssapi_krb5.so.2",
+    "/usr/lib/libkrb5.so.3",
+    "/usr/lib/libk5crypto.so.3",
+    "/usr/lib/libcom_err.so.2",
+    "/usr/lib/libkrb5support.so.0",
+    "/usr/lib/libkeyutils.so.1",
+    "/usr/lib/libresolv.so.2"
+  ]
+}
