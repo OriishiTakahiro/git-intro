@@ -35,6 +35,9 @@ jobs:
       - checkout
       - attach_workspace:
           at: /tmp/artifacts
+      - add_ssh_keys:
+        fingerprints:
+          - "87:71:ce:33:ae:a6:c6:6a:28:cd:6a:1c:3e:df:a4:8b"
       - run:
           name: configure git
           command: |
