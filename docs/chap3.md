@@ -43,9 +43,10 @@ __注意__
 まずクライアント側で非対称鍵を生成します．
 ```sh
 cd $HOME/.ssh
-# パスワードは空で大丈夫ですが，ファイル名は"git-ssh"としてください．
+# パスワードは空で大丈夫です．
+# ファイル名を訊かれるので"github-ssh"としてください．
 ssh-keygen -t rsa
-# 秘密鍵 "git-ssh", 公開鍵 "git-ssh.pub" ができていると思います
+# 秘密鍵 "git-ssh", 公開鍵 "github-ssh.pub" ができていると思います
 ls
 ```
 
@@ -59,11 +60,11 @@ __注意__
 
 [import](../src/chap3/ssh-config)
 
-通常SSHクライアントはデフォルトで`id_rsa`の名前の鍵を使おうとしますが，ここではgithub.comへのSSHアクセス時に先程作成した鍵を使うよう指定しています．
+通常SSHクライアントはデフォルトでid_rsaの名前の鍵を使おうとしますが，ここではgithub.comへのSSHアクセス時に先程作成した鍵を使うよう指定しています．
 
 #### 公開鍵の登録
 
-先程作成した`git-ssh`鍵をGitHubのアカウントに紐づけます．
+先程作成したgithub-sshをGitHubのアカウントに紐づけます．
 
 ブラウザからgithub.comにログインし，トップページ右上のユーザアイコンをクリック，Setting項目をクリックします．
 
@@ -77,10 +78,10 @@ __注意__
 
 ```sh
 # 公開鍵の内容を表示し，コピーします
-cat $HOME/.ssh/git-ssh.pub
+cat $HOME/.ssh/github-ssh.pub
 ```
 
-Titleには適当な名前を入力し，Keyには`git-ssh.pub`の内容テキストをコピペします．
+Titleには適当な名前を入力し，Keyには`github-ssh.pub`の内容テキストをコピペします．
 
 "Add SSH Key"をクリックすると公開鍵の登録が完了します．
 
