@@ -27,33 +27,40 @@ jobs:
           root: /tmp/artifacts
           paths:
             - _book
+            - .git
 
-  deploy:
+  publish:
     docker:
-      - image: circleci/node:10.15
+      - image: alpine/git:1.0.7
     steps:
       - checkout
       - attach_workspace:
           at: /tmp/artifacts
       - add_ssh_keys:
-        fingerprints:
-          - "87:71:ce:33:ae:a6:c6:6a:28:cd:6a:1c:3e:df:a4:8b"
+          fingerprints:
+            - "87:71:ce:33:ae:a6:c6:6a:28:cd:6a:1c:3e:df:a4:8b"
       - run:
-          name: configure git
+          name: move from persistent volumes
+          command: |
+            rm -rf ./*
+            mv /tmp/artifacts/_book/* .
+            mv /tmp/artifacts/.git .
+      - run:
+          name: push to gh-pages branch
           command: |
             git config --global user.email "takahiro0914@live.jp"
             git config --global user.name "OriishiTakahiro"
-      - run:
-          name: push to gh-pages branch
-          command: yarn run gh-pages -d /tmp/artifacts/_book
+            git checkout --orphan gh-pages
+            git add .
+            git commit -m "Auto publish"
+            git push --force origin gh-pages
 
 workflows:
   version: 2
-  build_deploy:
+  build_publish:
     jobs:
       - build
-      - deploy:
-          type: approval
+      - publish:
           requires:
             - build
           filters:
