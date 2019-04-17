@@ -23,6 +23,7 @@ jobs:
           command: |
             mkdir -p /tmp/artifacts
             mv _book /tmp/artifacts
+            mv .git /tmp/artifacts
       - persist_to_workspace:
           root: /tmp/artifacts
           paths:
@@ -44,7 +45,7 @@ jobs:
           command: |
             rm -rf ./*
             mv /tmp/artifacts/_book/* .
-            mv /tmp/artifacts/.git .
+            mv /tmp/artifacts/.git ./
       - run:
           name: push to gh-pages branch
           command: |
