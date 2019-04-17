@@ -45,7 +45,7 @@ jobs:
           command: |
             rm -rf ./*
             mv /tmp/artifacts/_book/* .
-            mv /tmp/artifacts/.git ./
+            mv /tmp/artifacts/.git ./.git
       - run:
           name: push to gh-pages branch
           command: |
