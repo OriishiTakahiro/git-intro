@@ -45,9 +45,9 @@ __注意__
 cd $HOME/.ssh
 # パスワードは空で大丈夫です．
 # ファイル名を訊かれるので"github-ssh"としてください．
-ssh-keygen -t rsa
+$ ssh-keygen -t rsa
 # 秘密鍵 "git-ssh", 公開鍵 "github-ssh.pub" ができていると思います
-ls
+$ ls
 ```
 
 __注意__
@@ -78,7 +78,7 @@ __注意__
 
 ```sh
 # 公開鍵の内容を表示し，コピーします
-cat $HOME/.ssh/github-ssh.pub
+$ cat $HOME/.ssh/github-ssh.pub
 ```
 
 Titleには適当な名前を入力し，Keyには`github-ssh.pub`の内容テキストをコピペします．
@@ -128,26 +128,26 @@ __SSHプロトコルを使用しているかを確認__し，URLをコピーし�
 ここでコピーしたURLからリポジトリをダウンロードしてきましょう，`git clone`コマンドで行います．
 
 ```sh
-cd $HOME/workdir
+$ cd $HOME/workdir
 # リポジトリのダウンロード
-git clone <リポジトリのURL>
+$ git clone <リポジトリのURL>
 # リポジトリがダウンロードできたか確認
-ls
+$ ls
 ```
 
 リポジトリにはリモートリポジトリが設定でき，これは`git remote`コマンドを利用して設定や確認ができます．
 
 ```sh
-cd $HOME/workdir/first-repo
+$ cd $HOME/workdir/first-repo
 # リモートリポジトリの確認
-git remote -v
+$ git remote -v
 ```
 
 すると以下のような出力が得られると思います．
 
 ```sh
-origin  git@github.com:OriishiTakahiro/first-repo.git (fetch)
-origin  git@github.com:OriishiTakahiro/first-repo.git (push)
+> origin  git@github.com:OriishiTakahiro/first-repo.git (fetch)
+> origin  git@github.com:OriishiTakahiro/first-repo.git (push)
 ```
 
 ここでは識別名"origin"で"github.com:OriishiTakahiro/first-repo.git"のリモートリポジトリが登録されています．
@@ -156,11 +156,11 @@ origin  git@github.com:OriishiTakahiro/first-repo.git (push)
 
 ```sh
 # リモートリポジトリの追加
-git remote add <識別名> <URL>
+$ git remote add <識別名> <URL>
 # リモートリポジトリの削除
-git remote <識別名>
+$ git remote <識別名>
 # リモートリポジトリの変更
-git remote set-url <識別名> <URL>
+$ git remote set-url <識別名> <URL>
 ```
 
 とすることでリモートリポジトリの設定ができます．
@@ -172,17 +172,17 @@ git remote set-url <識別名> <URL>
 では実際に変更を加えてコミットを作成しましょう．
 
 ```sh
-cd $HOME/workdir/first-repo
-echo "hoge" > hoge.txt
-git add hoge.txt
-git commit -m "Add hoge"
+$ cd $HOME/workdir/first-repo
+$ echo "hoge" > hoge.txt
+$ git add hoge.txt
+$ git commit -m "Add hoge"
 ```
 
 次に`git push`コマンドでリモートリポジトリへコミットをアップロードします．
 
 ```sh
 # originサーバのmasterブランチにアップロード
-git push origin master
+$ git push origin master
 ```
 
 GitHubのリポジトリのページをリロードしてみてください，`hoge.txt`が追加されているはずです．
@@ -203,9 +203,9 @@ GitHubのリポジトリのページをリロードしてみてください，`h
 
 ```sh
 # コミットのダウンロード
-git pull origin
+$ git pull origin
 # "foo.txt" を追加したコミット履歴があるか確認
-git log
+$ git log
 ```
 
 リモートリポジトリ(ここではGitHub)を交えた一連の操作の流れは以上となります．
