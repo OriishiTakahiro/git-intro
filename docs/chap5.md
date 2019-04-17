@@ -122,6 +122,9 @@ git init
 ```sh
 # Dockerを使って，hello-binの名前でバイナリファイルをビルド
 sudo docker run -v ${PWD}:/go golang go build main.go -o hello-bin 
+# 実行してログファイルを生成
+for i in `seq 1 10`; do; ./hello-bin hoge; sleep 1; done
+ls logs
 # ステージングされていないことを確かめる
 git add .
 ```
