@@ -4,12 +4,37 @@
 
 ### 保存スペース
 
-Gitは以下の3つのスペースを扱い，それぞれの役割を理解し上手く運用することでバージョン管理を行います．
+Gitはある時点におけるコミット(スナップショット)の保存，管理を行います．
+
+Gitはプロジェクトに次の3つの保存スペースを設けており，それらをうまく使い分けながらコミットの管理を行います．
 
 - ワーキングディレクトリ: 実際に作業をするディレクトリ
-- ステージングエリア: インデックスと呼ばれる次にリポジトリに納めるべきファイルを収納する場所で，リポジトリへ保存する直前の一時置き場のようなもの
-- (ローカル/リモート)リポジトリ: コミット(スナップショット)を保存する場所で，Gitではリモートとローカルの2種類が存在する．
+- ステージングエリア: インデックスと呼ばれる次にリポジトリに納めるべきファイルを収納する場所で，リポジトリへ保存する前の一時置き場
+- (ローカル/リモート)リポジトリ: コミットを保存する場所で，Gitではリモートとローカルの2種類が存在
 
+ちなみにステージングエリアが用意されている理由についてですが，これは__コミットの粒度__を管理するためにあります．
+
+例えばあるプロジェクトでモジュールAとモジュールB，モジュールCにそれぞれ変更を加えたとしましょう．
+
+これらをすべて一つのコミットにまとめてしまうのもよいですが，管理する都合上モジュール単位にコミットを分けたい場合もあります．
+
+この際にモジュールAの改修部分だけステージングにあげてコミット
+
+![stg1](../img/chap2/stg1.png)
+
+モジュールBの改修をステージングに上げる．
+
+モジュールBのバグ修正をステージングにあげてコミット
+
+![stg2](../img/chap2/stg2.png)
+
+モジュールCの改修部分だけステージングにあげてコミット
+
+![stg3](../img/chap2/stg3.png)
+
+とするだけで3つのコミットに分割することが可能です．
+
+このようにステージングエリアを使い分けることでコミットの粒度を調整し，変更の管理や追跡を容易にします．
 
 ### 分散型
 
@@ -17,7 +42,7 @@ Gitは以下の3つのスペースを扱い，それぞれの役割を理解し�
 
 各個人がローカル環境にワーキングディレクトリ，ステージングエリア，ローカルリポジトリを保有します．
 
-共有のリモートリポジトリを用意し，手元のローカルリポジトリに保存されたコミットをアップロード(push)，ないしはダウンロード(fetch)することで複数人でのコード管理を実現しています．
+共有のリモートリポジトリを用意し，手元のローカルリポジトリに保存されたコミットをプッシュ(アップロード)，ないしはフェッチ(ダウンロード)することで複数人でのコード管理を実現しています．
 
 ![分散型](../img/chap2/distro-type.png)
 
@@ -41,8 +66,6 @@ Play with Dockerでは初期からgitが入っているので直ぐに始めら�
 
 __Play with DockerではEscキーが使えません！vimを使う人はEscの代わりにCtrl+cを使ってください！__
 
-またここでは一旦リモートリポジトリのことは忘れてください．
-
 ### 設定
 
 Gitは誰が作成したコミットかを残します．
@@ -50,31 +73,35 @@ Gitは誰が作成したコミットかを残します．
 そのため自分が何者であるか，Gitに設定してあげましょう．
 
 ```sh
-git config --global user.email "<GitHubに登録したメールアドレス>"
-git config --global user.name "<GitHubのユーザ名>"
+$ git config --global user.email "<GitHubに登録したメールアドレス>"
+$ git config --global user.name "<GitHubのユーザ名>"
 ```
 
 設定の反映を確認します．
 
 ```sh
 # 一覧
-git config --global -l
+$ git config --global -l
 # 設定ファイルは$HOME/.gitcnfigに保存されている
-cat $HOME/.gitcnfig
+$ cat $HOME/.gitcnfig
 ```
 
-Gitはファイルを形式的に処理してあげているので，基本的に`$HOME/.gitconfig`ファイルは`git config`コマンドを通して書き換えましょう．
+直接ファイルの編集も可能ですが，基本的に`$HOME/.gitconfig`ファイルは`git config`コマンドを通して書き換えましょう．
 
 ### ローカルリポジトリの用意
 
 まずはローカルリポジトリ(以降，単にリポジトリとします)を作成しましょう．
 
+> リポジトリというと「コミットを保存する場所」と先に定義しましたが，一般的にプロジェクトのディレクトリそのものをリポジトリと表現することも多いです．
+> ややこしいですが仕方ありません．
+
+
 ```sh
-mkdir -p $HOME/workdir/first
-cd $HOME/workdir/first
-git init
+$ mkdir -p $HOME/workdir/first
+$ cd $HOME/workdir/first
+$ git init
 # .git ディレクトリが表示されていれば成功です
-ls -a
+$ ls -a
 ```
 
 これで`$HOME/workdir/first`がリポジトリになりました．
@@ -85,34 +112,36 @@ ls -a
 - ステージングエリア = .gitディレクトリ配下
 - コミット保存場所としてのリポジトリ = .gitディレクトリ配下
 
+したがって`.git`ディレクトリを削除すると，そのリポジトリはGitの管理対象から外れます．
+
 ### コミットまでの流れ
 
 次にGitのリポジトリに必須のREADME(説明書)を作ります．
 
 ```sh
-echo "# This Repository is My first repo." > README.md
+$ echo "# This Repository is My first repo." > README.md
 ```
 
 では変更をコミットとして保存していきましょう．
 
 ```sh
 # ステージングエリアに README.md の変更差分を追加
-git add README.md
+$ git add README.md
 # ステージングエリアの変更差分をコミットとして残す
-git commit -m "Add README.md"
+$ git commit -m "Add README.md"
 # コミット履歴を確認
-git log
+$ git log
 ```
 
 `git log`コマンドの出力は以下のようになっていると思います．
 
 ```sh
- commit 7def8c99a189d50c64ea76baf5cfc51d0b4679ee (HEAD -> maste
+ > commit 7def8c99a189d50c64ea76baf5cfc51d0b4679ee (HEAD -> maste
 r)
- Author: OriishiTakahiro <takahiro0914@live.jp>
- Date:   Tue Apr 9 13:04:46 2019 +0000
+ > Author: OriishiTakahiro <takahiro0914@live.jp>
+ > Date:   Tue Apr 9 13:04:46 2019 +0000
 
- Add README
+ > Add README
 ```
 
 それぞれの意味合いは次の通りです．
@@ -131,26 +160,26 @@ r)
 `git status`コマンドではリポジトリの各ファイルの状態を確認できます．
 
 ```sh
-echo "hoge" > hoge.txt
-echo "foo" > foo.txt
-git add hoge.txt
+$ echo "hoge" > hoge.txt
+$ echo "foo" > foo.txt
+$ git add hoge.txt
 # 各ファイルの状態確認
-git status
+$ git status
 ```
 
 `git status`の出力はこんな感じになるはずです．
 
 ```sh
-On branch master
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-        new file:   hoge.txt
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-        foo.txt
+> On branch master
+> Changes to be committed:
+>  (use "git reset HEAD <file>..." to unstage)
+> 
+>        new file:   hoge.txt
+> 
+> Untracked files:
+>   (use "git add <file>..." to include in what will be committed)
+> 
+>         foo.txt
 ```
 
 出力の意味合いはそれぞれ
@@ -164,16 +193,16 @@ gitで管理するプロジェクトのファイルを削除する場合に気�
 
 ```sh
 # カレントディレクトリを指定することで配下全てをaddの対象にできます
-git add .
-git commit -m "Add foo bar"
+$ git add .
+$ git commit -m "Add foo bar"
 ```
 
 ここで普通に
 
 ```sh
-rm hoge.txt
-git add .
-git commit -m "rm hoge"
+$ rm hoge.txt
+$ git add .
+$ git commit -m "rm hoge"
 ```
 
 としても，コミットには`hoge.txt`の削除が__反映されません．__
@@ -183,24 +212,24 @@ git commit -m "rm hoge"
 ファイルを削除する際は`git rm`コマンドを使いましょう．
 
 ```sh
-git rm hoge.txt
-git status
+$ git rm hoge.txt
+$ git status
 ```
 
 以下のように表示され，`hoge.txt`が削除されたことがステージングエリアに登録されていることがわかります．
 
 ```sh
-On branch master
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-        delet
+> On branch master
+> Changes to be committed:
+>   (use "git reset HEAD <file>..." to unstage)
+> 
+>         delet
 ```
 
 コミットすればhoge.txtはリポジトリから消えます．
 
 ```sh
-git commit -m "delete hoge"
+$ git commit -m "delete hoge"
 ```
 
 ちなみに間違えて`git rm`を使わずに削除してしまった場合は．`git add`に`-A`オプションをつけて，`git add . -A`とするとちゃんと反映されます．
@@ -214,42 +243,42 @@ git commit -m "delete hoge"
 ここまでのコマンドを全て実行していれば，`git log`とすると次のようになるはずです．
 
 ```sh
-commit 40c83b581aac94128a69eef5ee765c6290c872dd (HEAD -> maste
+> commit 40c83b581aac94128a69eef5ee765c6290c872dd (HEAD -> maste
 r)
-Author: OriishiTakahiro <takahiro0914@live.jp>
-Date:   Tue Apr 9 13:29:19 2019 +0000
-
-    delete hoge
-
-commit 0a4a2688320bb54991982e12203d391f27ae4108
-Author: OriishiTakahiro <takahiro0914@live.jp>
-Date:   Tue Apr 9 13:20:50 2019 +0000
-
-    add foo bar
-
-commit 7def8c99a189d50c64ea76baf5cfc51d0b4679ee
-Author: OriishiTakahiro <takahiro0914@live.jp>
-Date:   Tue Apr 9 13:04:46 2019 +0000
-
-    Add README.md
+> Author: OriishiTakahiro <takahiro0914@live.jp>
+> Date:   Tue Apr 9 13:29:19 2019 +0000
+> 
+>     delete hoge
+> 
+> commit 0a4a2688320bb54991982e12203d391f27ae4108
+> Author: OriishiTakahiro <takahiro0914@live.jp>
+> Date:   Tue Apr 9 13:20:50 2019 +0000
+> 
+>     add foo bar
+> 
+> commit 7def8c99a189d50c64ea76baf5cfc51d0b4679ee
+> Author: OriishiTakahiro <takahiro0914@live.jp>
+> Date:   Tue Apr 9 13:04:46 2019 +0000
+> 
+>     Add README.md
 ```
 
 ```sh
 # コミットIDを指定して差分を見る
 # (コミットIDは一意に特定できればいいので，最初の数桁で指定してもよい)
-git diff 0a4a2 40c83b
+$ git diff 0a4a2 40c83b
 ```
 
 出力は以下のようになります．
 
 ```sh
-diff --git a/hoge.txt b/hoge.txt
-deleted file mode 100644
-index 2262de0..0000000
---- a/hoge.txt
-+++ /dev/null
-@@ -1 +0,0 @@
--hoge
+> diff --git a/hoge.txt b/hoge.txt
+> deleted file mode 100644
+> index 2262de0..0000000
+> --- a/hoge.txt
+> +++ /dev/null
+> @@ -1 +0,0 @@
+> -hoge
 ```
 
 ### ブランチによる作業フローの分岐
@@ -268,22 +297,22 @@ Gitはブランチと呼ばれるコミットの流れを分岐/合流させる�
 これを`main.go`として保存してください．
 
 ```sh
-git add main.go
-git commit -m "Start galc project"
+$ git add main.go
+$ git commit -m "Start galc project"
 ```
 
 次にブランチを切って減算機能を追加しましょう．
 
 ```sh
 # 減算ブランチの追加
-git branch dev-sub
+$ git branch dev-sub
 ```
 
 ここで`git branch`とすると，現在作成されているブランチの一覧が出ます．
 
 ```sh
-  dev-sub
-* master
+>   dev-sub
+> * master
 ```
 
 `dev-sub`ブランチは先程作ったブランチで，`master`ブランチはデフォルトで用意されているブランチとなっています．
@@ -294,9 +323,9 @@ git branch dev-sub
 
 ```sh
 # dev-subブランチに移動
-git checkout dev-sub
+$ git checkout dev-sub
 # 現在のブランチが切り替わっているか確認
-git branch
+$ git branch
 ```
 
 `main.go`を書き換えて減算機能を追加してください．
@@ -304,43 +333,43 @@ git branch
 [import](../src/chap2/1st.go)
 
 ```sh
-git add main.go
-git commit -m "Add 'sub' command"
-git log
+$ git add main.go
+$ git commit -m "Add 'sub' command"
+$ git log
 ```
 
 次に`master`ブランチに戻り，commitを確認しましょう．
 
 ```sh
-git checkout master
-git log
+$ git checkout master
+$ git log
 ```
 
 ```
-commit 379d446c5114b37a088b769a5ced8bbe4d13afb6 (HEAD -> maste
+> commit 379d446c5114b37a088b769a5ced8bbe4d13afb6 (HEAD -> maste
 r)
-Author: OriishiTakahiro <takahiro0914@live.jp>
-Date:   Tue Apr 9 13:59:53 2019 +0000
-
-    Start galc project
-
-commit 40c83b581aac94128a69eef5ee765c6290c872dd
-Author: OriishiTakahiro <takahiro0914@live.jp>
-Date:   Tue Apr 9 13:29:19 2019 +0000
-
-    delete hoge
-
-commit 0a4a2688320bb54991982e12203d391f27ae4108
-Author: OriishiTakahiro <takahiro0914@live.jp>
-Date:   Tue Apr 9 13:20:50 2019 +0000
-
-    add foo bar
-
-commit 7def8c99a189d50c64ea76baf5cfc51d0b4679ee
-Author: OriishiTakahiro <takahiro0914@live.jp>
-Date:   Tue Apr 9 13:04:46 2019 +0000
-
-    Add READM
+> Author: OriishiTakahiro <takahiro0914@live.jp>
+> Date:   Tue Apr 9 13:59:53 2019 +0000
+> 
+>     Start galc project
+> 
+> commit 40c83b581aac94128a69eef5ee765c6290c872dd
+> Author: OriishiTakahiro <takahiro0914@live.jp>
+> Date:   Tue Apr 9 13:29:19 2019 +0000
+> 
+>     delete hoge
+> 
+> commit 0a4a2688320bb54991982e12203d391f27ae4108
+> Author: OriishiTakahiro <takahiro0914@live.jp>
+> Date:   Tue Apr 9 13:20:50 2019 +0000
+> 
+>     add foo bar
+> 
+> commit 7def8c99a189d50c64ea76baf5cfc51d0b4679ee
+> Author: OriishiTakahiro <takahiro0914@live.jp>
+> Date:   Tue Apr 9 13:04:46 2019 +0000
+> 
+>    Add READM
 ```
 
 先程のコミットは`master`ブランチに反映されていませんね?
@@ -349,9 +378,9 @@ Date:   Tue Apr 9 13:04:46 2019 +0000
 
 ```sh
 # 'master'ブランチで行ってくださいね？
-git merge dev-sub
+$ git merge dev-sub
 # 減算の開発コミットがマージされていることを確認
-git log
+$ git log
 ```
 
 このように
