@@ -38,16 +38,16 @@ Circle CIでは[YAML](https://yaml.org/spec/history/2001-05-26.html)と呼ばれ
 テンプレートは`.git`のあるディレクトリ直下に`.circleci/config.yml`として保存します．
 
 ```sh
-mkdir .circleci
-touch .circleci/config.yml
+$ mkdir .circleci
+$ touch .circleci/config.yml
 ```
 
 テンプレートの`ORG_NAME`と`REPO_NAME`を，GitHubのユーザ名とプロジェクト名に書き換えて`.circleci/config.yml`に記述しましょう，ユーザ「OriishiTakahiro」でプロジェクト「galc」の場合はこうなります．
 
 ```sh
-git add .
-git commit -m "Setup CI"
-git push origin master
+$ git add .
+$ git commit -m "Setup CI"
+$ git push origin master
 ```
 
 しばらくすると，JOBSの一覧にテストの結果が表示されます．
@@ -80,15 +80,15 @@ git push origin master
 
 ```sh
 # 他ブランチも表示
-git log --branches
+$ git log --branches
 # リモートリポジトリの他ブランチも表示
-git log --branches --remotes
+$ git log --branches --remotes
 # 簡潔に一行で表示
-git log --oneline
+$ git log --oneline
 # 直近5コミットのみ表示
-git log -n 5
+$ git log -n 5
 # グラフ形式で表示
-git lo --graph
+$ git lo --graph
 ```
 
 また，特定の言語やフレームワークについて`.gitignore`を生成してくれ[gibo](https://github.com/simonwhitaker/gibo)というツールも存在します．
@@ -105,10 +105,10 @@ git lo --graph
 
 ```sh
 # 適当なろリポジトリを作成
-mkidr $HOME/test-repo
-cd $HOME/test-repo
-mkdir logs
-git init
+$ mkidr $HOME/test-repo
+$ cd $HOME/test-repo
+$ mkdir logs
+$ git init
 ```
 
 次のソースコードを`main.go`として保存
@@ -121,12 +121,12 @@ git init
 
 ```sh
 # Dockerを使って，hello-binの名前でバイナリファイルをビルド
-sudo docker run -v ${PWD}:/go golang go build main.go -o hello-bin 
+$ sudo docker run -v ${PWD}:/go golang go build main.go -o hello-bin 
 # 実行してログファイルを生成
-for i in `seq 1 10`; do; ./hello-bin hoge; sleep 1; done
+$ for i in `seq 1 10`; do; ./hello-bin hoge; sleep 1; done
 ls logs
 # ステージングされていないことを確かめる
-git add .
+$ git add .
 ```
 
 
@@ -146,6 +146,6 @@ git add .
 # .gitkeepファイルをlogsディレクトリに追加
 touch logs/.gitkeep
 # ステージングされていることを確認
-git add .
-git status
+$ git add .
+$ git status
 ```
