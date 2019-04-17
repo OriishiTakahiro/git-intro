@@ -14,7 +14,9 @@ Gitのリモートリポジトリサーバは自分で立てることもでき�
 - AWS CodeCommit
 - GCP Cloud Source Repositories
 
- 本章では，Microsoft社が提供するGitHubを使った開発フローを体験していきます．
+本章では，Microsoft社が提供するGitHubを使った開発フローを体験していきます．
+
+(なお本記事もGitHubで[プロジェクト管理](https://github.com/OriishiTakahiro/git-intro)しています)
 
 ## リモートリポジトリの使い方
 

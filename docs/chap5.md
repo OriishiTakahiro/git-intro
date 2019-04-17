@@ -4,20 +4,22 @@
 
 ### Circle CIとは?
 
-[Circle CI](https://circleci.com/)はGitHubとの連携が可能なCI(Continuous Integration)サービスです．
+[Circle CI](https://circleci.com/)はGitHubとの連携が可能なCI(Continuous Integration)/CD(Cotinuous Delivery)サービスです．
 
-CIは開発者がリポジトリにプッシュするのを検知し，ビルドとテスト，更には開発者への通知をツールが自動で行うことで開発以外の負担を減らす手法になります．
+CI/CDは開発者がリポジトリにプッシュするのを検知し，ビルドとテスト，更には開発者への通知をツールが自動で行うことで，開発以外の作業負担を減らす手法です．
 
-CIサービスには以下のようなものがあります．
+本記事も[Circle CIを使ったビルドとデプロイ](https://github.com/OriishiTakahiro/git-intro/blob/master/.circleci/config.yml)を行っており，リモートリポジトリのmasterブランチにプッシュすると，自動でビルドされて公開されるようになっています．
+
+CI/CDサービスには以下のようなものがあります．
 
 - [Circle CI](https://circleci.com/)
 - [Travis CI](http://travis-ci.com/)
 - [Shippable](https://www.shippable.com/)
 - [Codeship](https://www.codeship.io/)
-- [AWS CodePipline]()
-- [GCP CodePipline]()
+- [AWS CodePipline](https://aws.amazon.com/jp/codepipeline/)
+- [GCP CI](https://cloud.google.com/solutions/continuous-integration/?hl=ja)
 
-また[Jenkins]()などのOSSを利用し，自らのサーバにCIツールを乗せることも可能です．
+また[Jenkins](https://jenkins.io/)などのOSSを利用し，オンプレミスにCI/CDツールを乗せることも可能です．
 
 ### Circle CIを使ってみる
 
