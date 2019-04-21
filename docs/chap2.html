@@ -1,0 +1,1186 @@
+
+<!DOCTYPE HTML>
+<html lang="ja" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Git基礎 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expand-active-chapter/expand-active-chapter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-navigator/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-git-author/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="chap2.html" />
+    
+    
+    <link rel="prev" href="chap1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    はじめに
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../">
+            
+                <a href="../#対象者">
+            
+                    
+                    対象者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../">
+            
+                <a href="../#本記事で取り扱う範囲">
+            
+                    
+                    本記事で取り扱う範囲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../">
+            
+                <a href="../#準備するもの">
+            
+                    
+                    準備するもの
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../">
+            
+                <a href="../#コマンドの読み方">
+            
+                    
+                    コマンドの読み方
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../">
+            
+                <a href="../#その他">
+            
+                    
+                    その他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="chap1.html">
+            
+                <a href="chap1.html">
+            
+                    
+                    Gitについて
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="chap1.html">
+            
+                <a href="chap1.html#Gitとは">
+            
+                    
+                    Gitとは
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="chap1.html">
+            
+                <a href="chap1.html#Gitがないとき，あるとき">
+            
+                    
+                    Gitがないとき，あるとき
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter active" data-level="3.1" data-path="chap2.html">
+            
+                <a href="chap2.html">
+            
+                    
+                    Git基礎
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="chap2.html">
+            
+                <a href="chap2.html#アーキテクチャ">
+            
+                    
+                    アーキテクチャ
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" data-path="chap2.html">
+            
+                <a href="chap2.html#保存スペース">
+            
+                    
+                    保存スペース
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.2" data-path="chap2.html">
+            
+                <a href="chap2.html#分散型">
+            
+                    
+                    分散型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="chap2.html">
+            
+                <a href="chap2.html#コミット管理のフロー">
+            
+                    
+                    コミット管理のフロー
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="chap2.html">
+            
+                <a href="chap2.html#実際に使う">
+            
+                    
+                    実際に使う
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.3.1" data-path="chap2.html">
+            
+                <a href="chap2.html#設定">
+            
+                    
+                    設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.2" data-path="chap2.html">
+            
+                <a href="chap2.html#ローカルリポジトリの用意">
+            
+                    
+                    ローカルリポジトリの用意
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.3" data-path="chap2.html">
+            
+                <a href="chap2.html#コミットまでの流れ">
+            
+                    
+                    コミットまでの流れ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.4" data-path="chap2.html">
+            
+                <a href="chap2.html#状態の確認">
+            
+                    
+                    状態の確認
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.5" data-path="chap2.html">
+            
+                <a href="chap2.html#ファイルの削除">
+            
+                    
+                    ファイルの削除
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.6" data-path="chap2.html">
+            
+                <a href="chap2.html#差分の確認">
+            
+                    
+                    差分の確認
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.7" data-path="chap2.html">
+            
+                <a href="chap2.html#ブランチによる作業フローの分岐">
+            
+                    
+                    ブランチによる作業フローの分岐
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="chap2.html">
+            
+                <a href="chap2.html#関連ツール">
+            
+                    
+                    関連ツール
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="chap3.html">
+            
+                <a href="chap3.html">
+            
+                    
+                    GitHubと合わせて
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="chap3.html">
+            
+                <a href="chap3.html#リモートリポジトリの使い方">
+            
+                    
+                    リモートリポジトリの使い方
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1.1" data-path="chap3.html">
+            
+                <a href="chap3.html#下準備">
+            
+                    
+                    下準備
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.2" data-path="chap3.html">
+            
+                <a href="chap3.html#リモートリポジトリの作成">
+            
+                    
+                    リモートリポジトリの作成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.3" data-path="chap3.html">
+            
+                <a href="chap3.html#リモートリポジトリのクローン">
+            
+                    
+                    リモートリポジトリのクローン
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.4" data-path="chap3.html">
+            
+                <a href="chap3.html#コミットのアップロード">
+            
+                    
+                    コミットのアップロード
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.5" data-path="chap3.html">
+            
+                <a href="chap3.html#コミットのダウンロード">
+            
+                    
+                    コミットのダウンロード
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="chap4.html">
+            
+                <a href="chap4.html">
+            
+                    
+                    チームで使うGit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="chap4.html">
+            
+                <a href="chap4.html#チーム結成">
+            
+                    
+                    チーム結成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="chap4.html">
+            
+                <a href="chap4.html#下準備">
+            
+                    
+                    下準備
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="chap4.html">
+            
+                <a href="chap4.html#開発">
+            
+                    
+                    開発
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="chap4.html">
+            
+                <a href="chap4.html#マージの承認フロー">
+            
+                    
+                    マージの承認フロー
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="chap5.html">
+            
+                <a href="chap5.html">
+            
+                    
+                    Tips
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="chap5.html">
+            
+                <a href="chap5.html#CircleCI">
+            
+                    
+                    CircleCI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="chap5.html">
+            
+                <a href="chap5.html#Markdown記法">
+            
+                    
+                    Markdown記法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="chap5.html">
+            
+                <a href="chap5.html#OSSライセンス">
+            
+                    
+                    OSSライセンス
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.4" data-path="chap5.html">
+            
+                <a href="chap5.html#ログの表示オプション">
+            
+                    
+                    ログの表示オプション
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.5" data-path="chap5.html">
+            
+                <a href="chap5.html#コミットに残したくないファイルがある">
+            
+                    
+                    コミットに残したくないファイルがある
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.6" data-path="chap5.html">
+            
+                <a href="chap5.html#ファイルでなくディレクトリのみコミットしたい">
+            
+                    
+                    ファイルでなくディレクトリのみコミットしたい
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            GitBookで公開 
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Git基礎</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="Git&#x57FA;&#x790E;">Git&#x57FA;&#x790E;</h1>
+<h2 id="&#x30A2;&#x30FC;&#x30AD;&#x30C6;&#x30AF;&#x30C1;&#x30E3;">1. &#x30A2;&#x30FC;&#x30AD;&#x30C6;&#x30AF;&#x30C1;&#x30E3;</h2>
+<h3 id="&#x4FDD;&#x5B58;&#x30B9;&#x30DA;&#x30FC;&#x30B9;">1.1. &#x4FDD;&#x5B58;&#x30B9;&#x30DA;&#x30FC;&#x30B9;</h3>
+<p>Git&#x306F;&#x3042;&#x308B;&#x6642;&#x70B9;&#x306B;&#x304A;&#x3051;&#x308B;&#x30B3;&#x30DF;&#x30C3;&#x30C8;(&#x30B9;&#x30CA;&#x30C3;&#x30D7;&#x30B7;&#x30E7;&#x30C3;&#x30C8;)&#x306E;&#x4FDD;&#x5B58;&#xFF0C;&#x7BA1;&#x7406;&#x3092;&#x884C;&#x3044;&#x307E;&#x3059;&#xFF0E;</p>
+<p>Git&#x306F;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x6B21;&#x306E;3&#x3064;&#x306E;&#x4FDD;&#x5B58;&#x30B9;&#x30DA;&#x30FC;&#x30B9;&#x3092;&#x8A2D;&#x3051;&#x3066;&#x304A;&#x308A;&#xFF0C;&#x305D;&#x308C;&#x3089;&#x3092;&#x3046;&#x307E;&#x304F;&#x4F7F;&#x3044;&#x5206;&#x3051;&#x306A;&#x304C;&#x3089;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x306E;&#x7BA1;&#x7406;&#x3092;&#x884C;&#x3044;&#x307E;&#x3059;&#xFF0E;</p>
+<ul>
+<li>&#x30EF;&#x30FC;&#x30AD;&#x30F3;&#x30B0;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;: &#x5B9F;&#x969B;&#x306B;&#x4F5C;&#x696D;&#x3092;&#x3059;&#x308B;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;</li>
+<li>&#x30B9;&#x30C6;&#x30FC;&#x30B8;&#x30F3;&#x30B0;&#x30A8;&#x30EA;&#x30A2;: &#x30A4;&#x30F3;&#x30C7;&#x30C3;&#x30AF;&#x30B9;&#x3068;&#x547C;&#x3070;&#x308C;&#x308B;&#x6B21;&#x306B;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306B;&#x7D0D;&#x3081;&#x308B;&#x3079;&#x304D;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x53CE;&#x7D0D;&#x3059;&#x308B;&#x5834;&#x6240;&#x3067;&#xFF0C;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x3078;&#x4FDD;&#x5B58;&#x3059;&#x308B;&#x524D;&#x306E;&#x4E00;&#x6642;&#x7F6E;&#x304D;&#x5834;</li>
+<li>(&#x30ED;&#x30FC;&#x30AB;&#x30EB;/&#x30EA;&#x30E2;&#x30FC;&#x30C8;)&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;: &#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x3092;&#x4FDD;&#x5B58;&#x3059;&#x308B;&#x5834;&#x6240;&#x3067;&#xFF0C;Git&#x3067;&#x306F;&#x30EA;&#x30E2;&#x30FC;&#x30C8;&#x3068;&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x306E;2&#x7A2E;&#x985E;&#x304C;&#x5B58;&#x5728;</li>
+</ul>
+<p>&#x3061;&#x306A;&#x307F;&#x306B;&#x30B9;&#x30C6;&#x30FC;&#x30B8;&#x30F3;&#x30B0;&#x30A8;&#x30EA;&#x30A2;&#x304C;&#x7528;&#x610F;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x7406;&#x7531;&#x306B;&#x3064;&#x3044;&#x3066;&#x3067;&#x3059;&#x304C;&#xFF0C;&#x3053;&#x308C;&#x306F;<strong>&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x306E;&#x7C92;&#x5EA6;</strong>&#x3092;&#x7BA1;&#x7406;&#x3059;&#x308B;&#x305F;&#x3081;&#x306B;&#x3042;&#x308A;&#x307E;&#x3059;&#xFF0E;</p>
+<p>&#x4F8B;&#x3048;&#x3070;&#x3042;&#x308B;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3067;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;A&#x3068;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;B&#xFF0C;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;C&#x306B;&#x305D;&#x308C;&#x305E;&#x308C;&#x5909;&#x66F4;&#x3092;&#x52A0;&#x3048;&#x305F;&#x3068;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#xFF0E;</p>
+<p>&#x3053;&#x308C;&#x3089;&#x3092;&#x3059;&#x3079;&#x3066;&#x4E00;&#x3064;&#x306E;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x306B;&#x307E;&#x3068;&#x3081;&#x3066;&#x3057;&#x307E;&#x3046;&#x306E;&#x3082;&#x3088;&#x3044;&#x3067;&#x3059;&#x304C;&#xFF0C;&#x7BA1;&#x7406;&#x3059;&#x308B;&#x90FD;&#x5408;&#x4E0A;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x5358;&#x4F4D;&#x306B;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x3092;&#x5206;&#x3051;&#x305F;&#x3044;&#x5834;&#x5408;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#xFF0E;</p>
+<p>&#x3053;&#x306E;&#x969B;&#x306B;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;A&#x306E;&#x6539;&#x4FEE;&#x90E8;&#x5206;&#x3060;&#x3051;&#x30B9;&#x30C6;&#x30FC;&#x30B8;&#x30F3;&#x30B0;&#x306B;&#x3042;&#x3052;&#x3066;&#x30B3;&#x30DF;&#x30C3;&#x30C8;</p>
+<p><img src="../img/chap2/stg1.png" alt="stg1"></p>
+<p>&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;B&#x306E;&#x6539;&#x4FEE;&#x3092;&#x30B9;&#x30C6;&#x30FC;&#x30B8;&#x30F3;&#x30B0;&#x306B;&#x4E0A;&#x3052;&#x308B;&#xFF0E;</p>
+<p>&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;B&#x306E;&#x30D0;&#x30B0;&#x4FEE;&#x6B63;&#x3092;&#x30B9;&#x30C6;&#x30FC;&#x30B8;&#x30F3;&#x30B0;&#x306B;&#x3042;&#x3052;&#x3066;&#x30B3;&#x30DF;&#x30C3;&#x30C8;</p>
+<p><img src="../img/chap2/stg2.png" alt="stg2"></p>
+<p>&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;C&#x306E;&#x6539;&#x4FEE;&#x90E8;&#x5206;&#x3060;&#x3051;&#x30B9;&#x30C6;&#x30FC;&#x30B8;&#x30F3;&#x30B0;&#x306B;&#x3042;&#x3052;&#x3066;&#x30B3;&#x30DF;&#x30C3;&#x30C8;</p>
+<p><img src="../img/chap2/stg3.png" alt="stg3"></p>
+<p>&#x3068;&#x3059;&#x308B;&#x3060;&#x3051;&#x3067;3&#x3064;&#x306E;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x306B;&#x5206;&#x5272;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x53EF;&#x80FD;&#x3067;&#x3059;&#xFF0E;</p>
+<p>&#x3053;&#x306E;&#x3088;&#x3046;&#x306B;&#x30B9;&#x30C6;&#x30FC;&#x30B8;&#x30F3;&#x30B0;&#x30A8;&#x30EA;&#x30A2;&#x3092;&#x4F7F;&#x3044;&#x5206;&#x3051;&#x308B;&#x3053;&#x3068;&#x3067;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x306E;&#x7C92;&#x5EA6;&#x3092;&#x8ABF;&#x6574;&#x3057;&#xFF0C;&#x5909;&#x66F4;&#x306E;&#x7BA1;&#x7406;&#x3084;&#x8FFD;&#x8DE1;&#x3092;&#x5BB9;&#x6613;&#x306B;&#x3057;&#x307E;&#x3059;&#xFF0E;</p>
+<h3 id="&#x5206;&#x6563;&#x578B;">1.2. &#x5206;&#x6563;&#x578B;</h3>
+<p>&#x307E;&#x305F;Git&#x306F;&#x5206;&#x6563;&#x578B;&#x306E;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x7BA1;&#x7406;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x306B;&#x5206;&#x985E;&#x3055;&#x308C;&#x307E;&#x3059;&#xFF0E;</p>
+<p>&#x5404;&#x500B;&#x4EBA;&#x304C;&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x74B0;&#x5883;&#x306B;&#x30EF;&#x30FC;&#x30AD;&#x30F3;&#x30B0;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#xFF0C;&#x30B9;&#x30C6;&#x30FC;&#x30B8;&#x30F3;&#x30B0;&#x30A8;&#x30EA;&#x30A2;&#xFF0C;&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x3092;&#x4FDD;&#x6709;&#x3057;&#x307E;&#x3059;&#xFF0E;</p>
+<p>&#x5171;&#x6709;&#x306E;&#x30EA;&#x30E2;&#x30FC;&#x30C8;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x3092;&#x7528;&#x610F;&#x3057;&#xFF0C;&#x624B;&#x5143;&#x306E;&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306B;&#x4FDD;&#x5B58;&#x3055;&#x308C;&#x305F;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x3092;&#x30D7;&#x30C3;&#x30B7;&#x30E5;(&#x30A2;&#x30C3;&#x30D7;&#x30ED;&#x30FC;&#x30C9;)&#xFF0C;&#x306A;&#x3044;&#x3057;&#x306F;&#x30D5;&#x30A7;&#x30C3;&#x30C1;(&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;)&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x8907;&#x6570;&#x4EBA;&#x3067;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x7BA1;&#x7406;&#x3092;&#x5B9F;&#x73FE;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#xFF0E;</p>
+<p><img src="../img/chap2/distro-type.png" alt="&#x5206;&#x6563;&#x578B;"></p>
+<h2 id="&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x7BA1;&#x7406;&#x306E;&#x30D5;&#x30ED;&#x30FC;">2. &#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x7BA1;&#x7406;&#x306E;&#x30D5;&#x30ED;&#x30FC;</h2>
+<p>&#x6B21;&#x306E;&#x56F3;&#x306B;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x304C;&#x3069;&#x306E;&#x3088;&#x3046;&#x306A;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3067;&#x5404;&#x30B9;&#x30DA;&#x30FC;&#x30B9;&#x3092;&#x5F80;&#x6765;&#x3057;&#x3066;&#x3044;&#x308B;&#x304B;&#x3092;&#x793A;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#xFF0E;</p>
+<p>&#x300C;&#x81EA;&#x5206;&#x306F;&#x4ECA;&#x4F55;&#x3092;&#x3084;&#x3063;&#x3066;&#x3044;&#x308B;&#x3093;&#x3060;&#x3063;&#x3051;&#xFF1F;&#x300D;&#x3068;&#x306A;&#x308B;&#x3053;&#x3068;&#x3082;&#x3042;&#x308B;&#x3068;&#x601D;&#x3046;&#x306E;&#x3067;&#xFF0C;&#x305D;&#x3046;&#x3044;&#x3063;&#x305F;&#x3068;&#x304D;&#x306F;&#x3053;&#x306E;&#x56F3;&#x3092;&#x898B;&#x8FD4;&#x3059;&#x3068;&#x3044;&#x3044;&#x304B;&#x3082;&#x3057;&#x308C;&#x307E;&#x305B;&#x3093;&#xFF0E;</p>
+<p><img src="../img/chap2/workflow.png" alt="&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x7BA1;&#x7406;&#x306E;&#x30D5;&#x30ED;&#x30FC;"></p>
+<h2 id="&#x5B9F;&#x969B;&#x306B;&#x4F7F;&#x3046;">3. &#x5B9F;&#x969B;&#x306B;&#x4F7F;&#x3046;</h2>
+<p>&#x6B21;&#x306B;&#x5B9F;&#x969B;&#x306B;Git&#x3092;&#x4F7F;&#x3063;&#x3066;&#x3044;&#x304D;&#x307E;&#x3057;&#x3087;&#x3046;&#xFF0E;</p>
+<p>&#x65E2;&#x306B;Git&#x304C;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x6E08;&#x307F;&#x306E;&#x74B0;&#x5883;&#x304C;&#x3042;&#x308C;&#x3070;&#x305D;&#x3061;&#x3089;&#x3092;&#x4F7F;&#x3063;&#x3066;&#x3044;&#x305F;&#x3060;&#x3044;&#x3066;&#x3082;&#x69CB;&#x3044;&#x307E;&#x305B;&#x3093;&#x304C;&#xFF0C;&#x74B0;&#x5883;&#x304C;&#x306A;&#x3051;&#x308C;&#x3070;<a href="https://labs.play-with-docker.com" target="_blank">Play with Docker</a>&#x3092;&#x4F7F;&#x3044;&#x307E;&#x3057;&#x3087;&#x3046;&#xFF0E;</p>
+<p>Play with Docker&#x3067;&#x306F;&#x521D;&#x671F;&#x304B;&#x3089;git&#x304C;&#x5165;&#x3063;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;&#x76F4;&#x3050;&#x306B;&#x59CB;&#x3081;&#x3089;&#x308C;&#x307E;&#x3059;&#xFF0E;</p>
+<p>&#x307E;&#x305F;&#x30A8;&#x30C7;&#x30A3;&#x30BF;&#x306F;vim&#x304C;&#x5165;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x304C;&#xFF0C;emacs&#x3084;nano&#x304C;&#x4F7F;&#x3044;&#x305F;&#x3044;&#x4EBA;&#x306F;<code>apk update &amp;&amp; apk add emacs</code>&#x306A;&#x3069;&#x3067;&#x5C0E;&#x5165;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#xFF0E;</p>
+<p><strong>Play with Docker&#x3067;&#x306F;Esc&#x30AD;&#x30FC;&#x304C;&#x4F7F;&#x3048;&#x307E;&#x305B;&#x3093;&#xFF01;vim&#x3092;&#x4F7F;&#x3046;&#x4EBA;&#x306F;Esc&#x306E;&#x4EE3;&#x308F;&#x308A;&#x306B;Ctrl+c&#x3092;&#x4F7F;&#x3063;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#xFF01;</strong></p>
+<h3 id="&#x8A2D;&#x5B9A;">3.1. &#x8A2D;&#x5B9A;</h3>
+<p>Git&#x306F;&#x8AB0;&#x304C;&#x4F5C;&#x6210;&#x3057;&#x305F;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x304B;&#x3092;&#x6B8B;&#x3057;&#x307E;&#x3059;&#xFF0E;</p>
+<p>&#x305D;&#x306E;&#x305F;&#x3081;&#x81EA;&#x5206;&#x304C;&#x4F55;&#x8005;&#x3067;&#x3042;&#x308B;&#x304B;&#xFF0C;Git&#x306B;&#x8A2D;&#x5B9A;&#x3057;&#x3066;&#x3042;&#x3052;&#x307E;&#x3057;&#x3087;&#x3046;&#xFF0E;</p>
+<pre><code class="lang-sh">$ git config --global user.email <span class="hljs-string">&quot;&lt;GitHub&#x306B;&#x767B;&#x9332;&#x3057;&#x305F;&#x30E1;&#x30FC;&#x30EB;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&gt;&quot;</span>
+$ git config --global user.name <span class="hljs-string">&quot;&lt;GitHub&#x306E;&#x30E6;&#x30FC;&#x30B6;&#x540D;&gt;&quot;</span>
+</code></pre>
+<p>&#x8A2D;&#x5B9A;&#x306E;&#x53CD;&#x6620;&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x307E;&#x3059;&#xFF0E;</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#x4E00;&#x89A7;</span>
+$ git config --global <span class="hljs-operator">-l</span>
+<span class="hljs-comment"># &#x8A2D;&#x5B9A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306F;$HOME/.gitcnfig&#x306B;&#x4FDD;&#x5B58;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;</span>
+$ cat <span class="hljs-variable">$HOME</span>/.gitconfig
+</code></pre>
+<p>&#x76F4;&#x63A5;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x7DE8;&#x96C6;&#x3082;&#x53EF;&#x80FD;&#x3067;&#x3059;&#x304C;&#xFF0C;&#x57FA;&#x672C;&#x7684;&#x306B;<code>$HOME/.gitconfig</code>&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306F;<code>git config</code>&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3092;&#x901A;&#x3057;&#x3066;&#x66F8;&#x304D;&#x63DB;&#x3048;&#x307E;&#x3057;&#x3087;&#x3046;&#xFF0E;</p>
+<h3 id="&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306E;&#x7528;&#x610F;">3.2. &#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306E;&#x7528;&#x610F;</h3>
+<p>&#x307E;&#x305A;&#x306F;&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;(&#x4EE5;&#x964D;&#xFF0C;&#x5358;&#x306B;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x3068;&#x3057;&#x307E;&#x3059;)&#x3092;&#x4F5C;&#x6210;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#xFF0E;</p>
+<blockquote>
+<p>&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x3068;&#x3044;&#x3046;&#x3068;&#x300C;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x3092;&#x4FDD;&#x5B58;&#x3059;&#x308B;&#x5834;&#x6240;&#x300D;&#x3068;&#x5148;&#x306B;&#x5B9A;&#x7FA9;&#x3057;&#x307E;&#x3057;&#x305F;&#x304C;&#xFF0C;&#x4E00;&#x822C;&#x7684;&#x306B;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x305D;&#x306E;&#x3082;&#x306E;&#x3092;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x3068;&#x8868;&#x73FE;&#x3059;&#x308B;&#x3053;&#x3068;&#x3082;&#x591A;&#x3044;&#x3067;&#x3059;&#xFF0E;
+&#x3084;&#x3084;&#x3053;&#x3057;&#x3044;&#x3067;&#x3059;&#x304C;&#x4ED5;&#x65B9;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#xFF0E;</p>
+</blockquote>
+<pre><code class="lang-sh">$ mkdir -p <span class="hljs-variable">$HOME</span>/workdir/first
+$ <span class="hljs-built_in">cd</span> <span class="hljs-variable">$HOME</span>/workdir/first
+$ git init
+<span class="hljs-comment"># .git &#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x3066;&#x3044;&#x308C;&#x3070;&#x6210;&#x529F;&#x3067;&#x3059;</span>
+$ ls <span class="hljs-operator">-a</span>
+</code></pre>
+<p>&#x3053;&#x308C;&#x3067;<code>$HOME/workdir/first</code>&#x304C;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306B;&#x306A;&#x308A;&#x307E;&#x3057;&#x305F;&#xFF0E;</p>
+<p>&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306E;&#x4E2D;&#x8EAB;&#x3092;&#x5148;&#x7A0B;&#x306E;&#x7528;&#x8A9E;&#x3068;&#x5BFE;&#x5FDC;&#x4ED8;&#x3051;&#x308B;&#x3068;&#xFF0C;&#x3053;&#x306E;&#x3088;&#x3046;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#xFF0E;</p>
+<ul>
+<li>&#x30EF;&#x30FC;&#x30AD;&#x30F3;&#x30B0;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA; = &#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306E;.git&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x4EE5;&#x5916;</li>
+<li>&#x30B9;&#x30C6;&#x30FC;&#x30B8;&#x30F3;&#x30B0;&#x30A8;&#x30EA;&#x30A2; = .git&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x914D;&#x4E0B;</li>
+<li>&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x4FDD;&#x5B58;&#x5834;&#x6240;&#x3068;&#x3057;&#x3066;&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA; = .git&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x914D;&#x4E0B;</li>
+</ul>
+<p>&#x3057;&#x305F;&#x304C;&#x3063;&#x3066;<code>.git</code>&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x3092;&#x524A;&#x9664;&#x3059;&#x308B;&#x3068;&#xFF0C;&#x305D;&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306F;Git&#x306E;&#x7BA1;&#x7406;&#x5BFE;&#x8C61;&#x304B;&#x3089;&#x5916;&#x308C;&#x307E;&#x3059;&#xFF0E;</p>
+<h3 id="&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x307E;&#x3067;&#x306E;&#x6D41;&#x308C;">3.3. &#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x307E;&#x3067;&#x306E;&#x6D41;&#x308C;</h3>
+<p>&#x6B21;&#x306B;Git&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306B;&#x5FC5;&#x9808;&#x306E;README(&#x8AAC;&#x660E;&#x66F8;)&#x3092;&#x4F5C;&#x308A;&#x307E;&#x3059;&#xFF0E;</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;# This Repository is My first repo.&quot;</span> &gt; README.md
+</code></pre>
+<p>&#x3067;&#x306F;&#x5909;&#x66F4;&#x3092;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x3068;&#x3057;&#x3066;&#x4FDD;&#x5B58;&#x3057;&#x3066;&#x3044;&#x304D;&#x307E;&#x3057;&#x3087;&#x3046;&#xFF0E;</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#x30B9;&#x30C6;&#x30FC;&#x30B8;&#x30F3;&#x30B0;&#x30A8;&#x30EA;&#x30A2;&#x306B; README.md &#x306E;&#x5909;&#x66F4;&#x5DEE;&#x5206;&#x3092;&#x8FFD;&#x52A0;</span>
+$ git add README.md
+<span class="hljs-comment"># &#x30B9;&#x30C6;&#x30FC;&#x30B8;&#x30F3;&#x30B0;&#x30A8;&#x30EA;&#x30A2;&#x306E;&#x5909;&#x66F4;&#x5DEE;&#x5206;&#x3092;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x3068;&#x3057;&#x3066;&#x6B8B;&#x3059;</span>
+$ git commit -m <span class="hljs-string">&quot;Add README.md&quot;</span>
+<span class="hljs-comment"># &#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x5C65;&#x6B74;&#x3092;&#x78BA;&#x8A8D;</span>
+$ git <span class="hljs-built_in">log</span>
+</code></pre>
+<p><code>git log</code>&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x306E;&#x51FA;&#x529B;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x308B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#xFF0E;</p>
+<pre><code class="lang-sh"> &gt; commit <span class="hljs-number">7</span>def8c99a189d50c64ea76baf5cfc51d0b4679ee (HEAD -&gt; maste
+r)
+ &gt; Author: OriishiTakahiro &lt;my-mail-addr@example.jp&gt;
+ &gt; Date:   Tue Apr <span class="hljs-number">9</span> <span class="hljs-number">13</span>:<span class="hljs-number">04</span>:<span class="hljs-number">46</span> <span class="hljs-number">2019</span> +<span class="hljs-number">0000</span>
+
+ &gt; Add README
+</code></pre>
+<p>&#x305D;&#x308C;&#x305E;&#x308C;&#x306E;&#x610F;&#x5473;&#x5408;&#x3044;&#x306F;&#x6B21;&#x306E;&#x901A;&#x308A;&#x3067;&#x3059;&#xFF0E;</p>
+<ul>
+<li>commit: &#x305D;&#x306E;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x3092;&#x6307;&#x3059;&#x30B3;&#x30DF;&#x30C3;&#x30C8;ID</li>
+<li>Author: &#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x4E3B;</li>
+<li>Date: &#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x4F5C;&#x6210;&#x6642;&#x523B;</li>
+<li>&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x30B3;&#x30E1;&#x30F3;&#x30C8; (-m &#x30AA;&#x30D7;&#x30B7;&#x30E7;&#x30F3;&#x3067;&#x6307;&#x5B9A;&#x3057;&#x305F;&#x6587;&#x5B57;&#x5217;)</li>
+</ul>
+<p>&#x4EE5;&#x4E0A;&#x304C;Git&#x306E;&#x4E3B;&#x306A;&#x6D41;&#x308C;&#x3067;&#x3059;&#xFF0E;</p>
+<p>&#x5909;&#x66F4;&#x2192;add&#x2192;commit&#x306E;&#x6D41;&#x308C;&#x3092;&#x7E70;&#x308A;&#x8FD4;&#x3057;&#x3066;&#x3044;&#x304F;&#x3053;&#x3068;&#x3067;&#x30EF;&#x30FC;&#x30AD;&#x30F3;&#x30B0;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x3067;&#x306E;&#x4F5C;&#x696D;&#x5C65;&#x6B74;&#x3092;&#x6B8B;&#x3057;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;&#xFF0E;</p>
+<h3 id="&#x72B6;&#x614B;&#x306E;&#x78BA;&#x8A8D;">3.4. &#x72B6;&#x614B;&#x306E;&#x78BA;&#x8A8D;</h3>
+<p><code>git status</code>&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3067;&#x306F;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306E;&#x5404;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x72B6;&#x614B;&#x3092;&#x78BA;&#x8A8D;&#x3067;&#x304D;&#x307E;&#x3059;&#xFF0E;</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;hoge&quot;</span> &gt; hoge.txt
+$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;foo&quot;</span> &gt; foo.txt
+$ git add hoge.txt
+<span class="hljs-comment"># &#x5404;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x72B6;&#x614B;&#x78BA;&#x8A8D;</span>
+$ git status
+</code></pre>
+<p><code>git status</code>&#x306E;&#x51FA;&#x529B;&#x306F;&#x3053;&#x3093;&#x306A;&#x611F;&#x3058;&#x306B;&#x306A;&#x308B;&#x306F;&#x305A;&#x3067;&#x3059;&#xFF0E;</p>
+<pre><code class="lang-sh">&gt; On branch master
+&gt; Changes to be committed:
+&gt;  (use <span class="hljs-string">&quot;git reset HEAD &lt;file&gt;...&quot;</span> to unstage)
+&gt; 
+&gt;        new file:   hoge.txt
+&gt; 
+&gt; Untracked files:
+&gt;   (use <span class="hljs-string">&quot;git add &lt;file&gt;...&quot;</span> to include <span class="hljs-keyword">in</span> what will be committed)
+&gt; 
+&gt;         foo.txt
+</code></pre>
+<p>&#x51FA;&#x529B;&#x306E;&#x610F;&#x5473;&#x5408;&#x3044;&#x306F;&#x305D;&#x308C;&#x305E;&#x308C;</p>
+<ul>
+<li>Changes to be committed: &#x30B9;&#x30C6;&#x30FC;&#x30B8;&#x30F3;&#x30B0;&#x6E08;&#x307F;&#xFF0C;<code>git commit</code>&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3067;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x306B;&#x306A;&#x308B;&#x5909;&#x66F4;&#x5206;</li>
+<li>Untracked files: &#x30B9;&#x30C6;&#x30FC;&#x30B8;&#x30F3;&#x30B0;&#x306B;&#x3059;&#x3089;&#x5165;&#x3063;&#x3066;&#x3044;&#x306A;&#x3044;</li>
+</ul>
+<h3 id="&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x524A;&#x9664;">3.5. &#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x524A;&#x9664;</h3>
+<p>git&#x3067;&#x7BA1;&#x7406;&#x3059;&#x308B;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x524A;&#x9664;&#x3059;&#x308B;&#x5834;&#x5408;&#x306B;&#x6C17;&#x3092;&#x3064;&#x3051;&#x308B;&#x3079;&#x304D;&#x3053;&#x3068;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#xFF0E;</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#x30AB;&#x30EC;&#x30F3;&#x30C8;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x3092;&#x6307;&#x5B9A;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x914D;&#x4E0B;&#x5168;&#x3066;&#x3092;add&#x306E;&#x5BFE;&#x8C61;&#x306B;&#x3067;&#x304D;&#x307E;&#x3059;</span>
+$ git add .
+$ git commit -m <span class="hljs-string">&quot;Add foo bar&quot;</span>
+</code></pre>
+<p>&#x3053;&#x3053;&#x3067;&#x666E;&#x901A;&#x306B;</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#x3053;&#x3053;&#x306E;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x306F;&#x5B9F;&#x884C;&#x3057;&#x306A;&#x3044;&#x3067;&#x304F;&#x3060;&#x3055;&#x3044;&#xFF01;</span>
+$ rm hoge.txt
+$ git add .
+$ git commit -m <span class="hljs-string">&quot;rm hoge&quot;</span>
+</code></pre>
+<p>&#x3068;&#x3057;&#x3066;&#x3082;&#xFF0C;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x306B;&#x306F;<code>hoge.txt</code>&#x306E;&#x524A;&#x9664;&#x304C;<strong>&#x53CD;&#x6620;&#x3055;&#x308C;&#x307E;&#x305B;&#x3093;&#xFF0E;</strong></p>
+<p><code>git add</code>&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3067;&#x30B9;&#x30C6;&#x30FC;&#x30B8;&#x30F3;&#x30B0;&#x30A8;&#x30EA;&#x30A2;&#x306B;&#x767B;&#x9332;&#x3055;&#x308C;&#x308B;&#x306E;&#x306F;<strong>&#x4FEE;&#x6B63;&#x304B;&#x65B0;&#x898F;&#x4F5C;&#x6210;&#x306E;&#x307F;</strong>&#x3067;&#x3059;&#xFF0E;</p>
+<p>&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x524A;&#x9664;&#x3059;&#x308B;&#x969B;&#x306F;<code>git rm</code>&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3092;&#x4F7F;&#x3044;&#x307E;&#x3057;&#x3087;&#x3046;&#xFF0E;</p>
+<pre><code class="lang-sh">$ git rm hoge.txt
+$ git status
+</code></pre>
+<p>&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x8868;&#x793A;&#x3055;&#x308C;&#xFF0C;<code>hoge.txt</code>&#x304C;&#x524A;&#x9664;&#x3055;&#x308C;&#x305F;&#x3053;&#x3068;&#x304C;&#x30B9;&#x30C6;&#x30FC;&#x30B8;&#x30F3;&#x30B0;&#x30A8;&#x30EA;&#x30A2;&#x306B;&#x767B;&#x9332;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x3053;&#x3068;&#x304C;&#x308F;&#x304B;&#x308A;&#x307E;&#x3059;&#xFF0E;</p>
+<pre><code class="lang-sh">&gt; On branch master
+&gt; Changes to be committed:
+&gt;   (use <span class="hljs-string">&quot;git reset HEAD &lt;file&gt;...&quot;</span> to unstage)
+&gt; 
+&gt;         delet
+</code></pre>
+<p>&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x3059;&#x308C;&#x3070;hoge.txt&#x306F;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x304B;&#x3089;&#x6D88;&#x3048;&#x307E;&#x3059;&#xFF0E;</p>
+<pre><code class="lang-sh">$ git commit -m <span class="hljs-string">&quot;delete hoge&quot;</span>
+</code></pre>
+<p>&#x3061;&#x306A;&#x307F;&#x306B;&#x9593;&#x9055;&#x3048;&#x3066;<code>git rm</code>&#x3092;&#x4F7F;&#x308F;&#x305A;&#x306B;&#x524A;&#x9664;&#x3057;&#x3066;&#x3057;&#x307E;&#x3063;&#x305F;&#x5834;&#x5408;&#x306F;&#xFF0E;<code>git add</code>&#x306B;<code>-A</code>&#x30AA;&#x30D7;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x3064;&#x3051;&#x3066;&#xFF0C;<code>git add . -A</code>&#x3068;&#x3059;&#x308B;&#x3068;&#x3061;&#x3083;&#x3093;&#x3068;&#x53CD;&#x6620;&#x3055;&#x308C;&#x307E;&#x3059;&#xFF0E;</p>
+<h3 id="&#x5DEE;&#x5206;&#x306E;&#x78BA;&#x8A8D;">3.6. &#x5DEE;&#x5206;&#x306E;&#x78BA;&#x8A8D;</h3>
+<p>&#x6B21;&#x306B;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x9593;&#x3067;&#x306E;&#x5909;&#x66F4;&#x5DEE;&#x5206;&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#xFF0E;</p>
+<p><code>git diff</code>&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3092;&#x4F7F;&#x3046;&#x3068;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x9593;&#x3067;&#x306E;&#x5909;&#x66F4;&#x70B9;&#x304C;&#x898B;&#x3089;&#x308C;&#x307E;&#x3059;&#xFF0E;</p>
+<p>&#x3053;&#x3053;&#x307E;&#x3067;&#x306E;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3092;&#x5168;&#x3066;&#x5B9F;&#x884C;&#x3057;&#x3066;&#x3044;&#x308C;&#x3070;&#xFF0C;<code>git log</code>&#x3068;&#x3059;&#x308B;&#x3068;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;&#x306F;&#x305A;&#x3067;&#x3059;&#xFF0E;</p>
+<pre><code class="lang-sh">$ git <span class="hljs-built_in">log</span>
+</code></pre>
+<pre><code class="lang-sh">&gt; commit <span class="hljs-number">40</span>c83b581aac94128a69eef5ee765c6290c872dd (HEAD -&gt; maste
+r)
+&gt; Author: OriishiTakahiro &lt;my-mail-addr@example.jp&gt;
+&gt; Date:   Tue Apr <span class="hljs-number">9</span> <span class="hljs-number">13</span>:<span class="hljs-number">29</span>:<span class="hljs-number">19</span> <span class="hljs-number">2019</span> +<span class="hljs-number">0000</span>
+&gt; 
+&gt;     delete hoge
+&gt; 
+&gt; commit <span class="hljs-number">0</span>a4a2688320bb54991982e12203d391f27ae4108
+&gt; Author: OriishiTakahiro &lt;my-mail-addr@example.jp&gt;
+&gt; Date:   Tue Apr <span class="hljs-number">9</span> <span class="hljs-number">13</span>:<span class="hljs-number">20</span>:<span class="hljs-number">50</span> <span class="hljs-number">2019</span> +<span class="hljs-number">0000</span>
+&gt; 
+&gt;     add foo bar
+&gt; 
+&gt; commit <span class="hljs-number">7</span>def8c99a189d50c64ea76baf5cfc51d0b4679ee
+&gt; Author: OriishiTakahiro &lt;my-mail-addr@example.jp&gt;
+&gt; Date:   Tue Apr <span class="hljs-number">9</span> <span class="hljs-number">13</span>:<span class="hljs-number">04</span>:<span class="hljs-number">46</span> <span class="hljs-number">2019</span> +<span class="hljs-number">0000</span>
+&gt; 
+&gt;     Add README.md
+</code></pre>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#x30B3;&#x30DF;&#x30C3;&#x30C8;ID&#x3092;&#x6307;&#x5B9A;&#x3057;&#x3066;&#x5DEE;&#x5206;&#x3092;&#x898B;&#x308B;</span>
+<span class="hljs-comment"># (&#x30B3;&#x30DF;&#x30C3;&#x30C8;ID&#x306F;&#x4E00;&#x610F;&#x306B;&#x7279;&#x5B9A;&#x3067;&#x304D;&#x308C;&#x3070;&#x3044;&#x3044;&#x306E;&#x3067;&#xFF0C;&#x6700;&#x521D;&#x306E;&#x6570;&#x6841;&#x3067;&#x6307;&#x5B9A;&#x3057;&#x3066;&#x3082;&#x3088;&#x3044;)</span>
+$ git diff <span class="hljs-number">0</span>a4a2 <span class="hljs-number">40</span>c83b
+</code></pre>
+<p>&#x51FA;&#x529B;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#xFF0E;</p>
+<pre><code class="lang-sh">&gt; diff --git a/hoge.txt b/hoge.txt
+&gt; deleted file mode <span class="hljs-number">100644</span>
+&gt; index <span class="hljs-number">2262</span>de0..<span class="hljs-number">0000000</span>
+&gt; --- a/hoge.txt
+&gt; +++ /dev/null
+&gt; @@ -<span class="hljs-number">1</span> +<span class="hljs-number">0</span>,<span class="hljs-number">0</span> @@
+&gt; -hoge
+</code></pre>
+<h3 id="&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306B;&#x3088;&#x308B;&#x4F5C;&#x696D;&#x30D5;&#x30ED;&#x30FC;&#x306E;&#x5206;&#x5C90;">3.7. &#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306B;&#x3088;&#x308B;&#x4F5C;&#x696D;&#x30D5;&#x30ED;&#x30FC;&#x306E;&#x5206;&#x5C90;</h3>
+<p>Git&#x306F;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3068;&#x547C;&#x3070;&#x308C;&#x308B;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x306E;&#x6D41;&#x308C;&#x3092;&#x5206;&#x5C90;/&#x5408;&#x6D41;&#x3055;&#x305B;&#x308B;&#x6A5F;&#x80FD;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#xFF0E;</p>
+<p>&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306E;&#x4F7F;&#x3044;&#x65B9;&#x3068;&#x3057;&#x3066;&#x306F;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306A;&#x3082;&#x306E;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#xFF0E;</p>
+<ul>
+<li>&#x958B;&#x767A;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3068;&#x88FD;&#x54C1;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3068;&#x3044;&#x3046;&#x5F62;&#x3067;&#xFF0C;&#x6700;&#x65B0;&#x3067;&#x306F;&#x306A;&#x3044;&#x304C;&#x78BA;&#x5B9F;&#x306B;&#x52D5;&#x304F;&#x3082;&#x306E;&#x3092;&#x7528;&#x610F;&#x3057;&#x3066;&#x304A;&#x304F;</li>
+<li>&#x958B;&#x767A;&#x6A5F;&#x80FD;&#x3054;&#x3068;&#x306B;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3092;&#x5206;&#x3051;&#x308B;&#x3053;&#x3068;&#x3067;&#xFF0C;&#x305D;&#x308C;&#x305E;&#x308C;&#x306E;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x3092;&#x7121;&#x99C4;&#x306B;&#x5E72;&#x6E09;&#x3055;&#x305B;&#x305A;&#x306B;&#x958B;&#x767A;&#x306B;&#x96C6;&#x4E2D;&#x3067;&#x304D;&#x308B;</li>
+</ul>
+<p>&#x65E9;&#x901F;&#x3084;&#x3063;&#x3066;&#x3044;&#x304D;&#x307E;&#x3057;&#x3087;&#x3046;&#xFF0C;&#x4ECA;&#x56DE;&#x4F7F;&#x7528;&#x3059;&#x308B;&#x306E;&#x306F;&#x4EE5;&#x524D;&#x8AAC;&#x660E;&#x306B;&#x4F7F;&#x3063;&#x305F;&#x8A08;&#x7B97;&#x30C4;&#x30FC;&#x30EB;Galc&#x3067;&#x3059;&#xFF0E;</p>
+<pre><code class="lang-golang"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;os&quot;</span>
+    sc <span class="hljs-string">&quot;strconv&quot;</span>
+)
+
+<span class="hljs-keyword">func</span> main() {
+    lhs, _ := sc.Atoi(os.Args[<span class="hljs-number">2</span>])
+    rhs, _ := sc.Atoi(os.Args[<span class="hljs-number">3</span>])
+    <span class="hljs-keyword">switch</span> os.Args[<span class="hljs-number">1</span>] {
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;add&quot;</span>:
+        fmt.Println(lhs + rhs)
+    }
+}
+</code></pre>
+<p>&#x30A8;&#x30C7;&#x30A3;&#x30BF;&#x3067;<code>main.go</code>&#x3068;&#x3057;&#x3066;&#x4FDD;&#x5B58;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#xFF0E;</p>
+<p>&#x3053;&#x3053;&#x3067;&#x30A4;&#x30F3;&#x30C7;&#x30F3;&#x30C8;&#x304C;&#x5D29;&#x308C;&#x308B;&#x304B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x304C;&#xFF0C; Go&#x8A00;&#x8A9E;&#x306E;&#x30E9;&#x30F3;&#x30BF;&#x30A4;&#x30E0;&#x306B;&#x306F;&#x6A19;&#x6E96;&#x3067;&#x6574;&#x5F62;&#x30C4;&#x30FC;&#x30EB;&#x304C;&#x4ED8;&#x968F;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#xFF0E;</p>
+<p>(Play with Docker&#x306B;&#x306F;Go&#x8A00;&#x8A9E;&#x306E;&#x30E9;&#x30F3;&#x30BF;&#x30A4;&#x30E0;&#x304C;&#x306A;&#x3044;&#x306E;&#x3067;&#xFF0C;Docker&#x3067;Go&#x8A00;&#x8A9E;&#x306E;&#x958B;&#x767A;&#x74B0;&#x5883;&#x3092;&#x52D5;&#x304B;&#x3057;&#x307E;&#x3059;)</p>
+<pre><code class="lang-sh">$ docker run -v <span class="hljs-variable">${PWD}</span>:/go golang go fmt main.go
+</code></pre>
+<p>&#x3053;&#x308C;&#x3067;</p>
+<p>&#x65E9;&#x901F;&#x5B9F;&#x884C;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#xFF0E;</p>
+<pre><code class="lang-sh">$ docker run -v <span class="hljs-variable">${PWD}</span>:/go golang go run main.go add <span class="hljs-number">1</span> <span class="hljs-number">2</span>
+</code></pre>
+<pre><code class="lang-sh">$ git add main.go
+$ git commit -m <span class="hljs-string">&quot;Start galc project&quot;</span>
+</code></pre>
+<p>&#x6B21;&#x306B;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3092;&#x5207;&#x3063;&#x3066;&#x6E1B;&#x7B97;&#x6A5F;&#x80FD;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#xFF0E;</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#x6E1B;&#x7B97;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306E;&#x8FFD;&#x52A0;</span>
+$ git branch dev-sub
+</code></pre>
+<p>&#x3053;&#x3053;&#x3067;<code>git branch</code>&#x3068;&#x3059;&#x308B;&#x3068;&#xFF0C;&#x73FE;&#x5728;&#x4F5C;&#x6210;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306E;&#x4E00;&#x89A7;&#x304C;&#x51FA;&#x307E;&#x3059;&#xFF0E;</p>
+<pre><code class="lang-sh">$ git branch
+&gt;   dev-sub
+&gt; * master
+</code></pre>
+<p><code>dev-sub</code>&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306F;&#x5148;&#x7A0B;&#x4F5C;&#x3063;&#x305F;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3067;&#xFF0C;<code>master</code>&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306F;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x3067;&#x7528;&#x610F;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3068;&#x306A;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#xFF0E;</p>
+<p>&apos;*&apos;&#x304C;&#x4ED8;&#x3044;&#x3066;&#x3044;&#x308B;&#x3082;&#x306E;&#x304C;&#x81EA;&#x5206;&#x304C;&#x3044;&#x308B;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306A;&#x306E;&#x3067;&#xFF0C;&#x73FE;&#x5728;<code>master</code>&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306B;&#x3044;&#x308B;&#x3068;&#x3044;&#x3046;&#x3053;&#x3068;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#xFF0E;</p>
+<p>&#x3067;&#x306F;&#x65E9;&#x901F;<code>dev-sub</code>&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306B;&#x79FB;&#x52D5;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#xFF0C;<code>git checkout</code>&#x3092;&#x4F7F;&#x3063;&#x3066;&#x79FB;&#x52D5;&#x3057;&#x307E;&#x3059;&#xFF0E;</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># dev-sub&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306B;&#x79FB;&#x52D5;</span>
+$ git checkout dev-sub
+<span class="hljs-comment"># &#x73FE;&#x5728;&#x306E;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x304C;&#x5207;&#x308A;&#x66FF;&#x308F;&#x3063;&#x3066;&#x3044;&#x308B;&#x304B;&#x78BA;&#x8A8D;</span>
+$ git branch
+</code></pre>
+<p><code>main.go</code>&#x3092;&#x66F8;&#x304D;&#x63DB;&#x3048;&#x3066;&#x6E1B;&#x7B97;&#x6A5F;&#x80FD;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#xFF0E;</p>
+<pre><code class="lang-golang"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;os&quot;</span>
+    sc <span class="hljs-string">&quot;strconv&quot;</span>
+)
+
+<span class="hljs-keyword">func</span> main() {
+    lhs, _ := sc.Atoi(os.Args[<span class="hljs-number">2</span>])
+    rhs, _ := sc.Atoi(os.Args[<span class="hljs-number">3</span>])
+    <span class="hljs-keyword">switch</span> os.Args[<span class="hljs-number">1</span>] {
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;add&quot;</span>:
+        fmt.Println(lhs + rhs)
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;sub&quot;</span>:
+        fmt.Println(lhs - rhs)
+    }
+}
+</code></pre>
+<pre><code class="lang-sh">$ git add main.go
+$ git commit -m <span class="hljs-string">&quot;Add &apos;sub&apos; command&quot;</span>
+$ git <span class="hljs-built_in">log</span>
+</code></pre>
+<p>&#x6B21;&#x306B;<code>master</code>&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306B;&#x623B;&#x308A;&#xFF0C;commit&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#xFF0E;</p>
+<pre><code class="lang-sh">$ git checkout master
+$ git <span class="hljs-built_in">log</span>
+</code></pre>
+<pre><code>&gt; commit 379d446c5114b37a088b769a5ced8bbe4d13afb6 (HEAD -&gt; maste
+r)
+&gt; Author: OriishiTakahiro &lt;my-mail-addr@example.jp&gt;
+&gt; Date:   Tue Apr 9 13:59:53 2019 +0000
+&gt; 
+&gt;     Start galc project
+&gt; 
+&gt; commit 40c83b581aac94128a69eef5ee765c6290c872dd
+&gt; Author: OriishiTakahiro &lt;my-mail-addr@example.jp&gt;
+&gt; Date:   Tue Apr 9 13:29:19 2019 +0000
+&gt; 
+&gt;     delete hoge
+&gt; 
+&gt; commit 0a4a2688320bb54991982e12203d391f27ae4108
+&gt; Author: OriishiTakahiro &lt;my-mail-addr@example.jp&gt;
+&gt; Date:   Tue Apr 9 13:20:50 2019 +0000
+&gt; 
+&gt;     add foo bar
+&gt; 
+&gt; commit 7def8c99a189d50c64ea76baf5cfc51d0b4679ee
+&gt; Author: OriishiTakahiro &lt;my-mail-addr@example.jp&gt;
+&gt; Date:   Tue Apr 9 13:04:46 2019 +0000
+&gt; 
+&gt;    Add READM
+</code></pre><p>&#x5148;&#x7A0B;&#x306E;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x306F;<code>master</code>&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306B;&#x53CD;&#x6620;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x305B;&#x3093;&#x306D;?</p>
+<p>&#x6E1B;&#x7B97;&#x958B;&#x767A;&#x7D42;&#x4E86;&#x3057;&#x305F;&#x306E;&#x3067;&#xFF0C;<code>dev-sub</code>&#x306E;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x3092;<code>master</code>&#x306B;&#x30DE;&#x30FC;&#x30B8;&#x3057;&#x3066;&#x5909;&#x66F4;&#x3092;<code>master</code>&#x306B;&#x53D6;&#x308A;&#x8FBC;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#xFF0E;</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># &apos;master&apos;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3067;&#x884C;&#x3063;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x306D;&#xFF1F;</span>
+$ git merge dev-sub
+<span class="hljs-comment"># &#x6E1B;&#x7B97;&#x306E;&#x958B;&#x767A;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x304C;&#x30DE;&#x30FC;&#x30B8;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x3053;&#x3068;&#x3092;&#x78BA;&#x8A8D;</span>
+$ git <span class="hljs-built_in">log</span>
+</code></pre>
+<p>&#x3053;&#x306E;&#x3088;&#x3046;&#x306B;</p>
+<ol>
+<li>&#x6A5F;&#x80FD;&#x958B;&#x767A;&#x7528;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3092;&#x4F5C;&#x6210;</li>
+<li>&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x3092;&#x305F;&#x304F;&#x3055;&#x3093;&#x4F5C;&#x6210;</li>
+<li>&#x7D71;&#x5408;&#x3059;&#x308B;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306B;&#x6A5F;&#x80FD;&#x958B;&#x767A;&#x7528;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3092;&#x30DE;&#x30FC;&#x30B8;</li>
+</ol>
+<p>&#x306E;&#x30B5;&#x30A4;&#x30AF;&#x30EB;&#x3092;&#x7E70;&#x308A;&#x8FD4;&#x3057;&#x3066;&#x3044;&#x304D;&#xFF0C;&#x958B;&#x767A;&#x3092;&#x884C;&#x3063;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;&#xFF0E;</p>
+<h2 id="&#x95A2;&#x9023;&#x30C4;&#x30FC;&#x30EB;">4. &#x95A2;&#x9023;&#x30C4;&#x30FC;&#x30EB;</h2>
+<p>Git&#x306B;&#x306F;CLI&#x30C4;&#x30FC;&#x30EB;&#x3060;&#x3051;&#x3060;&#x3051;&#x3067;&#x306A;&#x304F;&#xFF0C;&#x30D3;&#x30B8;&#x30E5;&#x30A2;&#x30E9;&#x30A4;&#x30BA;&#x3055;&#x308C;&#xFF0C;&#x30DC;&#x30BF;&#x30F3;&#x30DD;&#x30C1;&#x30DD;&#x30C1;&#x3067;&#x3067;&#x304D;&#x308B;GUI&#x30C4;&#x30FC;&#x30EB;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#xFF0E;</p>
+<ul>
+<li><a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a></li>
+<li><a href="https://www.sourcetreeapp.com/" target="_blank">Sourcetree</a></li>
+<li><a href="https://tortoisegit.org/" target="_blank">TortoiseGit</a></li>
+<li><a href="https://www.gitkraken.com/" target="_blank">Gitkraken</a></li>
+</ul>
+<p>&#x307E;&#x305F;IDE&#x3084;&#x30A8;&#x30C7;&#x30A3;&#x30BF;&#x306E;&#x30D7;&#x30E9;&#x30B0;&#x30A4;&#x30F3;&#x3068;&#x3057;&#x3066;&#xFF0C;Git&#x3068;&#x9023;&#x643A;&#x3059;&#x308B;&#x6A5F;&#x80FD;&#x3084;&#x30D7;&#x30E9;&#x30B0;&#x30A4;&#x30F3;&#x304C;&#x591A;&#x304F;&#xFF0C;&#x305D;&#x3061;&#x3089;&#x3092;&#x4F7F;&#x3046;&#x306E;&#x3082;&#x3044;&#x3044;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#xFF0E;</p>
+<ul>
+<li>IntelliJ IDEA</li>
+<li>Android Studio</li>
+<li>Atom</li>
+<li>Visual Studio Code</li>
+</ul>
+<div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#Git&#x57FA;&#x790E;">Git&#x57FA;&#x790E;</a></p><li><a href="#&#x30A2;&#x30FC;&#x30AD;&#x30C6;&#x30AF;&#x30C1;&#x30E3;">1. &#x30A2;&#x30FC;&#x30AD;&#x30C6;&#x30AF;&#x30C1;&#x30E3;</a></li><ul><li><a href="#&#x4FDD;&#x5B58;&#x30B9;&#x30DA;&#x30FC;&#x30B9;">1.1. &#x4FDD;&#x5B58;&#x30B9;&#x30DA;&#x30FC;&#x30B9;</a></li><li><a href="#&#x5206;&#x6563;&#x578B;">1.2. &#x5206;&#x6563;&#x578B;</a></li></ul><li><a href="#&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x7BA1;&#x7406;&#x306E;&#x30D5;&#x30ED;&#x30FC;">2. &#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x7BA1;&#x7406;&#x306E;&#x30D5;&#x30ED;&#x30FC;</a></li><li><a href="#&#x5B9F;&#x969B;&#x306B;&#x4F7F;&#x3046;">3. &#x5B9F;&#x969B;&#x306B;&#x4F7F;&#x3046;</a></li><ul><li><a href="#&#x8A2D;&#x5B9A;">3.1. &#x8A2D;&#x5B9A;</a></li><li><a href="#&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306E;&#x7528;&#x610F;">3.2. &#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306E;&#x7528;&#x610F;</a></li><li><a href="#&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x307E;&#x3067;&#x306E;&#x6D41;&#x308C;">3.3. &#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x307E;&#x3067;&#x306E;&#x6D41;&#x308C;</a></li><li><a href="#&#x72B6;&#x614B;&#x306E;&#x78BA;&#x8A8D;">3.4. &#x72B6;&#x614B;&#x306E;&#x78BA;&#x8A8D;</a></li><li><a href="#&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x524A;&#x9664;">3.5. &#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x524A;&#x9664;</a></li><li><a href="#&#x5DEE;&#x5206;&#x306E;&#x78BA;&#x8A8D;">3.6. &#x5DEE;&#x5206;&#x306E;&#x78BA;&#x8A8D;</a></li><li><a href="#&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306B;&#x3088;&#x308B;&#x4F5C;&#x696D;&#x30D5;&#x30ED;&#x30FC;&#x306E;&#x5206;&#x5C90;">3.7. &#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306B;&#x3088;&#x308B;&#x4F5C;&#x696D;&#x30D5;&#x30ED;&#x30FC;&#x306E;&#x5206;&#x5C90;</a></li></ul><li><a href="#&#x95A2;&#x9023;&#x30C4;&#x30FC;&#x30EB;">4. &#x95A2;&#x9023;&#x30C4;&#x30FC;&#x30EB;</a></li></ul></div><a href="#&#x30A2;&#x30FC;&#x30AD;&#x30C6;&#x30AF;&#x30C1;&#x30E3;" id="goTop"><i class="fa fa-arrow-up"></i></a><div class="git-author-container git-author-bottom"><div class="modified">Last modified by OriishiTakahiro at 2019-04-21 21:05:26</div><div class="created">Created by OriishiTakahiro at 2019-04-08 02:13:11</div></div>
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="chap1.html#Gitがないとき，あるとき" class="navigation navigation-prev " aria-label="Previous page: Gitがないとき，あるとき">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="chap2.html#アーキテクチャ" class="navigation navigation-next " aria-label="Next page: アーキテクチャ">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Git基礎","level":"3.1","depth":1,"next":{"title":"アーキテクチャ","level":"3.1.1","depth":2,"anchor":"#アーキテクチャ","path":"docs/chap2.md","ref":"docs/chap2.md#アーキテクチャ","articles":[{"title":"保存スペース","level":"3.1.1.1","depth":3,"anchor":"#保存スペース","path":"docs/chap2.md","ref":"docs/chap2.md#保存スペース","articles":[]},{"title":"分散型","level":"3.1.1.2","depth":3,"anchor":"#分散型","path":"docs/chap2.md","ref":"docs/chap2.md#分散型","articles":[]}]},"previous":{"title":"Gitがないとき，あるとき","level":"2.1.2","depth":2,"anchor":"#Gitがないとき，あるとき","path":"docs/chap1.md","ref":"docs/chap1.md#Gitがないとき，あるとき","articles":[]},"dir":"ltr"},"config":{"plugins":["expand-active-chapter","navigator","include-codeblock","uml","japanese-support","search-languages","git-author","copy-code-button"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"git-author":{},"search":{"maxIndexSize":1000000},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"japanese-support":{},"highlight":{},"uml":{"charset":"utf-8","format":"svg"},"search-languages":{"ignoreSpecialCharacters":false,"lang":"jp","maxIndexSize":1000000},"navigator":{},"expand-active-chapter":{},"copy-code-button":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"docs/chap2.md","mtime":"2019-04-21T12:15:50.554Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-21T12:17:31.430Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expand-active-chapter/expand-active-chapter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-languages/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-languages/lunr-languages.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-languages/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+

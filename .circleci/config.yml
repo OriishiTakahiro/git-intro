@@ -1,0 +1,69 @@
+version: 2
+
+jobs:
+
+  build:
+    docker:
+      - image: circleci/node:10.15
+    environment:
+      TZ: /usr/share/zoneinfo/Asia/Tokyo
+    steps:
+      - checkout
+      - run:
+          name: install gitbook
+          command: yarn install
+      - run:
+          name: build docs
+          command: |
+            yarn run gitbook install
+            yarn run gitbook init
+            yarn run gitbook build
+      - run:
+          name: mv artifacts to persistent workspace
+          command: |
+            mkdir -p /tmp/artifacts
+            mv _book /tmp/artifacts
+            mv .git /tmp/artifacts
+      - persist_to_workspace:
+          root: /tmp/artifacts
+          paths:
+            - _book
+            - .git
+
+  publish:
+    docker:
+      - image: alpine/git:1.0.7
+    steps:
+      - checkout
+      - attach_workspace:
+          at: /tmp/artifacts
+      - add_ssh_keys:
+          fingerprints:
+            - "87:71:ce:33:ae:a6:c6:6a:28:cd:6a:1c:3e:df:a4:8b"
+      - run:
+          name: move from persistent volumes
+          command: |
+            rm -rf ./*
+            mv /tmp/artifacts/_book/* .
+            mv /tmp/artifacts/.git ./.git
+      - run:
+          name: push to gh-pages branch
+          command: |
+            git config --global user.email "takahiro0914@live.jp"
+            git config --global user.name "OriishiTakahiro"
+            git checkout --orphan gh-pages
+            git add .
+            git commit -m "Auto publish"
+            git push --force origin gh-pages
+
+workflows:
+  version: 2
+  build_publish:
+    jobs:
+      - build
+      - publish:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
