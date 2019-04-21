@@ -48,7 +48,7 @@ cd $HOME/.ssh
 # パスワードは空で大丈夫です．
 # ファイル名を訊かれるので"github-ssh"としてください．
 $ ssh-keygen -t rsa
-# 秘密鍵 "git-ssh", 公開鍵 "github-ssh.pub" ができていると思います
+# 秘密鍵 "github-ssh", 公開鍵 "github-ssh.pub" ができていると思います
 $ ls
 ```
 
@@ -160,7 +160,7 @@ $ git remote -v
 # リモートリポジトリの追加
 $ git remote add <識別名> <URL>
 # リモートリポジトリの削除
-$ git remote <識別名>
+$ git remote rm <識別名>
 # リモートリポジトリの変更
 $ git remote set-url <識別名> <URL>
 ```
