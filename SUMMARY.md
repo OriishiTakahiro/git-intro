@@ -31,8 +31,6 @@
     * [差分の確認](docs/chap2.md#差分の確認)
     * [ブランチによる作業フローの分岐](docs/chap2.md#ブランチによる作業フローの分岐)
   * [関連ツール](docs/chap2.md#関連ツール)
-  * [Tips](docs/chap2.md#Tips)
-  * [差分の保存](docs/chap2.md#差分の保存)GitHub
 
 ---
 
