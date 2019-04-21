@@ -54,7 +54,8 @@
 
 * [Tips](docs/chap5.md)
   * [CircleCI](docs/chap5.md#CircleCI)
+  * [Markdown記法](docs/chap5.md#Markdown記法)
   * [OSSライセンス](docs/chap5.md#OSSライセンス)
   * [ログの表示オプション](docs/chap5.md#ログの表示オプション)
-  * [コミットに残したくないファイルがある]()
-  * [ファイルでなくディレクトリのみコミットしたい]()
+  * [コミットに残したくないファイルがある](docs/chap5.md#コミットに残したくないファイルがある)
+  * [ファイルでなくディレクトリのみコミットしたい](docs/chap5.md#ファイルでなくディレクトリのみコミットしたい)

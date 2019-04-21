@@ -138,7 +138,7 @@ $ git log
 ```sh
  > commit 7def8c99a189d50c64ea76baf5cfc51d0b4679ee (HEAD -> maste
 r)
- > Author: OriishiTakahiro <takahiro0914@live.jp>
+ > Author: OriishiTakahiro <my-mail-addr@example.jp>
  > Date:   Tue Apr 9 13:04:46 2019 +0000
 
  > Add README
@@ -250,19 +250,19 @@ $ git log
 ```sh
 > commit 40c83b581aac94128a69eef5ee765c6290c872dd (HEAD -> maste
 r)
-> Author: OriishiTakahiro <takahiro0914@live.jp>
+> Author: OriishiTakahiro <my-mail-addr@example.jp>
 > Date:   Tue Apr 9 13:29:19 2019 +0000
 > 
 >     delete hoge
 > 
 > commit 0a4a2688320bb54991982e12203d391f27ae4108
-> Author: OriishiTakahiro <takahiro0914@live.jp>
+> Author: OriishiTakahiro <my-mail-addr@example.jp>
 > Date:   Tue Apr 9 13:20:50 2019 +0000
 > 
 >     add foo bar
 > 
 > commit 7def8c99a189d50c64ea76baf5cfc51d0b4679ee
-> Author: OriishiTakahiro <takahiro0914@live.jp>
+> Author: OriishiTakahiro <my-mail-addr@example.jp>
 > Date:   Tue Apr 9 13:04:46 2019 +0000
 > 
 >     Add README.md
@@ -370,25 +370,25 @@ $ git log
 ```
 > commit 379d446c5114b37a088b769a5ced8bbe4d13afb6 (HEAD -> maste
 r)
-> Author: OriishiTakahiro <takahiro0914@live.jp>
+> Author: OriishiTakahiro <my-mail-addr@example.jp>
 > Date:   Tue Apr 9 13:59:53 2019 +0000
 > 
 >     Start galc project
 > 
 > commit 40c83b581aac94128a69eef5ee765c6290c872dd
-> Author: OriishiTakahiro <takahiro0914@live.jp>
+> Author: OriishiTakahiro <my-mail-addr@example.jp>
 > Date:   Tue Apr 9 13:29:19 2019 +0000
 > 
 >     delete hoge
 > 
 > commit 0a4a2688320bb54991982e12203d391f27ae4108
-> Author: OriishiTakahiro <takahiro0914@live.jp>
+> Author: OriishiTakahiro <my-mail-addr@example.jp>
 > Date:   Tue Apr 9 13:20:50 2019 +0000
 > 
 >     add foo bar
 > 
 > commit 7def8c99a189d50c64ea76baf5cfc51d0b4679ee
-> Author: OriishiTakahiro <takahiro0914@live.jp>
+> Author: OriishiTakahiro <my-mail-addr@example.jp>
 > Date:   Tue Apr 9 13:04:46 2019 +0000
 > 
 >    Add READM

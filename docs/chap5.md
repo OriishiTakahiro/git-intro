@@ -56,6 +56,20 @@ $ git push origin master
 
 ![circleci-jobs](../img/chap5/circleci-jobs.png)
 
+## Markdown記法
+
+[Markdown](https://tools.ietf.org/html/rfc7763)という記法があります．
+
+Gitリポジトリの説明書には慣習的に`README.md`という名前を使用するという話をしました．
+
+Markdownは`.md`という拡張子を使います．
+
+文法も簡単で，エンジニアが触れる多くの環境下で利用できるマークアップ言語です．
+
+GitHubやGitLabではMarkdownを自動的にHTMLに解釈して表示する機能があり，またQiitaやはてなブログなどもブログ記事をMarkdownで書くことが可能です．
+
+ぜひとも身につけておきたい技術のひとつです．
+
 ## OSSライセンス
 
 就職後の自社開発などプライベートリポジトリでの開発に関しては，あまり関係のない話かもしれませんが，もしみなさんがOSS(Open Source Software)の開発をパブリックリポジトリで行うのであれば，改変や再配布に関するライセンス表記をしておいたほうが無難かもしれません．
@@ -93,7 +107,6 @@ $ git log -n 5
 $ git lo --graph
 ```
 
-また，特定の言語やフレームワークについて`.gitignore`を生成してくれ[gibo](https://github.com/simonwhitaker/gibo)というツールも存在します．
 
 ## コミットに残したくないファイルがある
 
@@ -131,6 +144,7 @@ ls logs
 $ git add .
 ```
 
+また，特定の言語やフレームワークについて`.gitignore`を自動生成してくれる[gibo](https://github.com/simonwhitaker/gibo)というツールも存在します．
 
 ## ファイルでなくディレクトリのみコミットしたい
 

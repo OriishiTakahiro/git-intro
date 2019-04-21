@@ -69,6 +69,14 @@ $ echo hello
 
 それとは別にファイルに記述してほしいプログラムや設定のコードなどは特に先頭文字を配置していません．
 
+また，特定の文字列へ置き換えてほしい箇所は"<>"で囲んでいます．
+```sh
+# こういうものは
+$ git config --global user.email <自分のEメールアドレス>
+# こう入力する
+$ git config --global user.email hogehoge@example.com
+```
+
 ## その他
 
 著者:  [@OriishiTakahiro](https://twitter.com/OriishiTakahiro)
